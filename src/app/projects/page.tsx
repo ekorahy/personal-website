@@ -1,11 +1,11 @@
 import HeaderPage from "@/components/molecule/HeaderPage";
 
-export default function Home() {
+export default function Page() {
   return (
     <article>
       <HeaderPage
-        title="Home"
-        description="Introduction and Professional Career Journey."
+        title="Projects"
+        description="Showcase my works on front-end development."
       />
     </article>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function NavSide() {
   return (
-    <aside className="hidden border-r px-4 sm:block">
+    <aside className="hidden border-r px-6 sm:block">
       <div className="flex gap-2 border-b border-dashed pb-6">
         <Image
           src="/profile.jpg"

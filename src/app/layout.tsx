@@ -16,9 +16,9 @@ export default function RootLayout({
         <header className="absolute bottom-0 w-full sm:hidden">
           <NavBar />
         </header>
-        <main className="mx-auto flex max-w-6xl gap-2 p-4">
+        <main className="mx-auto flex max-w-6xl gap-6 p-4">
           <NavSide />
-          <div>{children}</div>
+          <div className="w-full">{children}</div>
         </main>
       </body>
     </html>
