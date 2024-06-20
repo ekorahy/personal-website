@@ -17,15 +17,21 @@ export default function CareerItem({
   link: string;
 }) {
   return (
-    <section className="border p-4 sm:w-max">
-      <div className="flex gap-2">
+    <section className="w-full rounded-md border p-4">
+      <div className="flex gap-4">
         <div className="flex items-center">
-          <Image src={logo} width={70} height={70} alt={`${company} logo`} />
+          <Image
+            className="rounded-md"
+            src={logo}
+            width={80}
+            height={80}
+            alt={`${company} logo`}
+          />
         </div>
         <div>
-          <h4 className="font-semibold">{position}</h4>
+          <h4 className="font-semibold text-slate-950">{position}</h4>
           <div className="gap-2 sm:flex">
-            <Link className="underline" href={link}>
+            <Link className="underline hover:text-slate-950" href={link}>
               {company}
             </Link>
             <p>
