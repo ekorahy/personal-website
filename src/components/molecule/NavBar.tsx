@@ -1,4 +1,4 @@
-import { navItems } from "@/data/local";
+import { navItems } from "@/data/local/navigation";
 import NavItem from "@/components/atom/NavItem";
 
 export default function NavBar() {
