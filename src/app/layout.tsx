@@ -12,13 +12,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} text-slate-500`}>
         <header className="fixed bottom-0 w-full sm:hidden">
           <NavBar />
         </header>
         <main className="mx-auto mb-20 flex max-w-6xl gap-6 p-4">
           <NavSide />
-          <div className="w-full">{children}</div>
+          <div className="w-full sm:pl-56">{children}</div>
         </main>
       </body>
     </html>

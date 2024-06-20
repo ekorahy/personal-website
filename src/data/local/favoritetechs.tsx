@@ -27,7 +27,7 @@ export const favoriteTechs = [
   },
   {
     id: "favoritetech-4",
-    name: "Tailwind CSS",
+    name: "Tailwind",
     logo: <SiTailwindcss />,
     color: "#06B6D4",
   },
