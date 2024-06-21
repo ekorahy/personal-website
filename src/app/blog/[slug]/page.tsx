@@ -6,6 +6,8 @@ import { fullBlog } from "@/types";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 
+export const revalidate = 30;
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogDetail: fullBlog = await getBlogDetail(params.slug);
 
