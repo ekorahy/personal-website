@@ -6,6 +6,8 @@ import { fullBlog } from "@/types";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 
+export const revalidate = 30;
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogDetail: fullBlog = await getBlogDetail(params.slug);
 
@@ -19,6 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           width={100}
           height={100}
           alt={`${blogDetail.title} image`}
+          unoptimized
         />
         <div className="prose mt-4">
           <PortableText value={blogDetail.content} />

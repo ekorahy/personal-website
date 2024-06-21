@@ -26,6 +26,7 @@ export default function CareerItem({
             width={80}
             height={80}
             alt={`${company} logo`}
+            unoptimized
           />
         </div>
         <div>
