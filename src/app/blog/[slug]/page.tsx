@@ -5,9 +5,6 @@ import { urlFor } from "@/lib/sanity";
 import { fullBlog } from "@/types";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
-import { revalidatePath } from "next/cache";
-
-revalidatePath("/blog/[slug]", "page");
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogDetail: fullBlog = await getBlogDetail(params.slug);
@@ -17,7 +14,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <HeaderPage title="Blog Detail" description={`${blogDetail.title}`} />
       <ContentSection>
         <Image
-        className="w-full rounded-md"
+          className="w-full rounded-md"
           src={urlFor(blogDetail.titleImage).url()}
           width={100}
           height={100}
