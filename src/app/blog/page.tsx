@@ -5,7 +5,7 @@ import { getBlog } from "@/data/remote/blog";
 import { blogCard } from "@/types";
 import { revalidatePath } from "next/cache";
 
-revalidatePath("/(main)/post/[slug]", "page");
+revalidatePath("/blog", "page");
 
 export default async function Page() {
   const blog: blogCard[] = await getBlog();

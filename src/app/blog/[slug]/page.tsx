@@ -5,6 +5,9 @@ import { urlFor } from "@/lib/sanity";
 import { fullBlog } from "@/types";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import { revalidatePath } from "next/cache";
+
+revalidatePath("/blog/[slug]", "page");
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogDetail: fullBlog = await getBlogDetail(params.slug);
