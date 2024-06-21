@@ -21,6 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           width={100}
           height={100}
           alt={`${blogDetail.title} image`}
+          unoptimized
         />
         <div className="prose mt-4">
           <PortableText value={blogDetail.content} />
