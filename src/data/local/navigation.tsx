@@ -26,7 +26,7 @@ export const navItems = [
     linkTo: "/blog",
   },
   {
-    name: "Contacts",
+    name: "Contact",
     icon: <GrSend />,
     linkTo: "/contacts",
   },

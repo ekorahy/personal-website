@@ -9,7 +9,7 @@ import { BiLogoGmail } from "react-icons/bi";
 export default function Page() {
   return (
     <article>
-      <HeaderPage title="Contacts" description="Reach out to me." />
+      <HeaderPage title="Contact" description="Reach out to me." />
       <ContentSection>
         <TitleSection title="Find me on" icon={<BiNetworkChart />} />
         <SocialMediaList />
