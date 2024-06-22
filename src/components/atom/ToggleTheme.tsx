@@ -10,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/atom/DropdownMenu";
-import { Button } from "./button";
+import { Button } from "@/components/atom/Button";
 
 export function ToggleTheme() {
   const { setTheme } = useTheme();
