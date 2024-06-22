@@ -13,6 +13,7 @@ export default function NavSide() {
           height={50}
           alt="Profil photo"
           unoptimized
+          priority={true}
         />
         <div className="flex flex-col justify-center">
           <h1 className="font-bold text-slate-950">Ekorahy</h1>
