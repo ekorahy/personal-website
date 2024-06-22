@@ -21,7 +21,7 @@ export default function NavItem({
     <Link
       href={linkTo}
       className={clsx(
-        "flex items-center gap-2 text-slate-950 sm:rounded-md sm:px-5 sm:py-2 sm:hover:bg-slate-200",
+        "flex items-center gap-2 text-slate-950 dark:text-white sm:rounded-md sm:px-5 sm:py-2 sm:hover:bg-slate-200 dark:sm:hover:bg-slate-950",
         {
           "sm:bg-gradient-to-r sm:from-lime-200 sm:to-cyan-400":
             pathname === linkTo,
@@ -30,7 +30,7 @@ export default function NavItem({
     >
       <div
         className={clsx(
-          "sm:hover:bg-transparant w-max rounded-full bg-slate-950 p-1.5 text-2xl text-white hover:bg-slate-100 hover:text-slate-950 sm:bg-transparent sm:text-slate-950 sm:hover:bg-transparent",
+          "sm:hover:bg-transparant w-max rounded-full bg-slate-950 p-1.5 text-2xl text-white hover:bg-slate-100 hover:text-slate-950 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-950 dark:hover:text-white sm:bg-transparent sm:text-slate-950 sm:hover:bg-transparent dark:sm:bg-transparent dark:sm:text-white",
           {
             "bg-gradient-to-r from-lime-200 to-cyan-400 sm:bg-none":
               pathname === linkTo,

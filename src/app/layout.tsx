@@ -20,10 +20,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="fixed bottom-0 w-full sm:hidden">
+          <header className="fixed z-50 bottom-0 w-full sm:hidden">
             <NavBar />
           </header>
-          <main className="mx-auto mb-20 flex max-w-6xl gap-6 p-4">
+          <main className="mx-auto mb-20 flex max-w-6xl gap-6 p-4 sm:p-8">
             <NavSide />
             <div className="w-full sm:pl-56">{children}</div>
           </main>

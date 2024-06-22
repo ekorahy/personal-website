@@ -78,7 +78,7 @@ export const EmailInput = () => {
           ></textarea>
         </div>
         <button
-          className="w-full rounded-md bg-gradient-to-r from-lime-200 to-teal-400 p-2 text-center text-white"
+          className="w-full rounded-md bg-gradient-to-r from-lime-200 to-teal-400 p-2 text-center text-white dark:text-slate-950"
           type="submit"
         >
           Send Message
