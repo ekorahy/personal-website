@@ -22,6 +22,7 @@ export default function BlogItem({
         height={100}
         alt={`${title} image`}
         unoptimized
+        priority={true}
       />
       <div className="my-2">
         <h3 className="block text-lg font-bold underline hover:text-slate-950">

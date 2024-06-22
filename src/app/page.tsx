@@ -25,6 +25,7 @@ export default function Home() {
             height={55}
             alt="Profil photo"
             unoptimized
+            priority={true}
           />
           <div className="flex flex-col justify-center">
             <h3 className="font-bold">Eko Rahayu Widodo</h3>

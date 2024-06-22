@@ -22,6 +22,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           height={100}
           alt={`${blogDetail.title} image`}
           unoptimized
+          priority={true}
         />
         <div className="prose mt-4">
           <PortableText value={blogDetail.content} />
