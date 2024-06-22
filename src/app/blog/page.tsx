@@ -2,7 +2,7 @@ import BlogList from "@/components/molecule/BlogList";
 import ContentSection from "@/components/molecule/ContentSection";
 import HeaderPage from "@/components/molecule/HeaderPage";
 import { getBlog } from "@/data/remote/blog";
-import { blogCard } from "@/types";
+import { blogCard } from "@/types/blog";
 
 export const revalidate = 30;
 
