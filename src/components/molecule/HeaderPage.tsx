@@ -9,7 +9,7 @@ export default function HeaderPage({
   description: string;
 }) {
   return (
-    <header className="border-b border-dashed pb-4">
+    <header className="border-b border-dashed pb-6">
       <TitlePage title={title} />
       <DescriptionPage description={description} />
     </header>

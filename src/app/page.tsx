@@ -32,9 +32,9 @@ export default function Home() {
             <p className="font-light">@ekorahy</p>
           </div>
         </div>
-        <p className="mb-2 text-xl font-bold text-slate-950">
+        <p className="mb-2 text-xl font-bold text-slate-950 dark:text-white">
           Hi, I&apos;m Eko{" "}
-          <span className="animate-wave inline-block text-3xl">👋</span>
+          <span className="inline-block animate-wave text-3xl">👋</span>
         </p>
         <ul className="mx-4 mb-2 list-disc">
           <li>Front-end Engineer.</li>
@@ -45,7 +45,7 @@ export default function Home() {
           Working within the React ecosystem for front-end web development and
           Kotlin for mobile app development (Android).
         </p>
-        <q className="block w-full rounded-md bg-slate-50 px-4 py-2 italic">
+        <q className="block w-full rounded-md bg-slate-50 px-4 py-2 italic dark:bg-slate-950">
           Manifesting ideas into digital reality that are easily accessible and
           inclusive for user.
         </q>
@@ -61,14 +61,14 @@ export default function Home() {
         <div className="flex items-center gap-4">
           <Link
             href="/"
-            className="flex items-center gap-2 rounded-md bg-gradient-to-r from-lime-200 to-cyan-400 px-4 py-3 text-white hover:from-lime-300 hover:to-cyan-500"
+            className="flex items-center gap-2 rounded-md bg-gradient-to-r from-lime-200 to-cyan-400 px-4 py-3 text-white hover:from-lime-300 hover:to-cyan-500 dark:text-slate-950"
           >
             <BiLogoGmail className="text-xl" />
             Email Me
           </Link>
           <Link
             href="/"
-            className="flex items-center gap-1 hover:text-slate-950"
+            className="flex items-center gap-1 hover:text-slate-950 dark:hover:text-white"
           >
             <MdFileDownload className="text-xl" />
             Download CV

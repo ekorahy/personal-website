@@ -6,7 +6,7 @@ export default function TitleSection({
   icon: React.ReactNode;
 }) {
   return (
-    <h3 className="mb-4 flex items-center gap-2 font-bold text-slate-950">
+    <h3 className="mb-4 flex items-center gap-2 font-bold text-slate-950 dark:text-white">
       <span className="text-2xl">{icon}</span>
       {title}
     </h3>

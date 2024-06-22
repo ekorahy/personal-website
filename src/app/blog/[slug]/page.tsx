@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           unoptimized
           priority={true}
         />
-        <div className="prose mt-4">
+        <div className="!max-w-none prose mt-8 dark:prose-headings:text-white dark:prose-strong:text-white">
           <PortableText value={blogDetail.content} />
         </div>
       </ContentSection>

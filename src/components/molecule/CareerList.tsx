@@ -1,5 +1,5 @@
 import { career } from "@/data/local/career";
-import CareerItem from "./CareerItem";
+import CareerItem from "../atom/CareerItem";
 
 export default function CareerList() {
   return (

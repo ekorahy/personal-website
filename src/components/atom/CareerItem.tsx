@@ -31,9 +31,9 @@ export default function CareerItem({
           />
         </div>
         <div>
-          <h4 className="font-semibold text-slate-950">{position}</h4>
+          <h4 className="font-semibold text-slate-950 dark:text-white">{position}</h4>
           <div className="gap-2 sm:flex">
-            <Link className="underline hover:text-slate-950" href={link}>
+            <Link className="underline hover:text-slate-950 dark:hover:text-white" href={link}>
               {company}
             </Link>
             <p>

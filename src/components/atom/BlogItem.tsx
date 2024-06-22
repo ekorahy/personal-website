@@ -14,7 +14,7 @@ export default function BlogItem({
   titleImage: any;
 }) {
   return (
-    <section className="rounded-md p-4 shadow-md">
+    <section className="rounded-md p-4 shadow-md dark:shadow-white">
       <Image
         className="w-full"
         src={urlFor(titleImage).url()}
@@ -25,7 +25,7 @@ export default function BlogItem({
         priority={true}
       />
       <div className="my-2">
-        <h3 className="block text-lg font-bold underline hover:text-slate-950">
+        <h3 className="block text-lg font-bold underline hover:text-slate-950 dark:hover:text-white">
           <Link href={`/blog/${currentSlug}`}>{title}</Link>
         </h3>
         <p className="line-clamp-3">{smallDescription}</p>
