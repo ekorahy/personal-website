@@ -1,5 +1,6 @@
 import { navItems } from "@/data/local/navigation";
 import NavItem from "@/components/atom/NavItem";
+import { ToggleTheme } from "../atom/ToggleTheme";
 
 export default function NavBar() {
   return (
@@ -14,6 +15,7 @@ export default function NavBar() {
             category="navbar"
           />
         ))}
+        <ToggleTheme />
       </div>
     </nav>
   );
