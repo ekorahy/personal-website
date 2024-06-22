@@ -1,6 +1,6 @@
 export const navFooter = [
   {
-    name: 'Performances',
+    name: 'Performance',
     link: '/'
   },
   {
