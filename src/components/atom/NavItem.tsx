@@ -21,7 +21,7 @@ export default function NavItem({
     <Link
       href={linkTo}
       className={clsx(
-        "flex items-center gap-2 text-slate-950 dark:text-white sm:rounded-md sm:px-5 sm:py-2 sm:hover:bg-slate-200 dark:sm:hover:bg-slate-950",
+        "font-bold flex items-center gap-2 text-slate-950 dark:text-white sm:rounded-md sm:px-5 sm:py-2 sm:hover:bg-slate-200 dark:sm:hover:bg-slate-950",
         {
           "sm:bg-gradient-to-r sm:from-lime-200 sm:to-cyan-400":
             pathname === linkTo,

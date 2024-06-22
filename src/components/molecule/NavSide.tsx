@@ -35,7 +35,7 @@ export default function NavSide() {
             ))}
           </nav>
         </div>
-        <div className="mx-auto mb-10">
+        <div className="mx-auto mb-16">
           <ToggleTheme />
         </div>
       </div>
