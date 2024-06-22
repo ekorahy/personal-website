@@ -2,7 +2,7 @@ import ContentSection from "@/components/molecule/ContentSection";
 import HeaderPage from "@/components/molecule/HeaderPage";
 import { getBlogDetail } from "@/data/remote/blog";
 import { urlFor } from "@/lib/sanity";
-import { fullBlog } from "@/types";
+import { fullBlog } from "@/types/blog";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 

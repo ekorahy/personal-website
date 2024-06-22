@@ -1,4 +1,4 @@
-import { blogCard } from "@/types";
+import { blogCard } from "@/types/blog";
 import BlogItem from "../atom/BlogItem";
 
 export default function BlogList({ blog }: { blog: blogCard[] }) {
