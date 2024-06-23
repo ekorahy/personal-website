@@ -34,7 +34,7 @@ export const EmailInput = () => {
               Name
             </label>
             <input
-              className="w-full rounded-md border p-2"
+              className="w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
               id="name"
               type="text"
               name="name"
@@ -46,7 +46,7 @@ export const EmailInput = () => {
               Email
             </label>
             <input
-              className="dark:bg-dark w-full rounded-md border p-2"
+              className="w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
               id="email"
               type="email"
               name="email"
@@ -59,7 +59,7 @@ export const EmailInput = () => {
             Subject
           </label>
           <input
-            className="dark:bg-dark w-full rounded-md border p-2"
+            className="w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
             id="subject"
             type="text"
             name="subject"
@@ -71,14 +71,14 @@ export const EmailInput = () => {
             Message
           </label>
           <textarea
-            className="dark:bg-dark min-h-28 w-full rounded-md border p-2"
+            className="min-h-28 w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
             id="message"
             name="message"
             required
           ></textarea>
         </div>
         <button
-          className="w-full rounded-md bg-gradient-to-r from-lime-200 to-teal-400 p-2 text-center text-white dark:text-slate-950"
+          className="w-full rounded-md bg-gradient-to-r from-emerald-200 to-cyan-400 px-4 py-3 font-bold text-white hover:from-emerald-300 hover:to-cyan-500 dark:from-emerald-300 dark:to-cyan-500 dark:text-zinc-950 dark:hover:from-emerald-200 dark:hover:to-cyan-400"
           type="submit"
         >
           Send Message

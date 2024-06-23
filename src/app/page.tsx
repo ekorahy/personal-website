@@ -20,7 +20,7 @@ export default function Home() {
         <div className="mb-2 flex gap-2 sm:hidden">
           <Image
             src="/profile.jpg"
-            className="rounded-full"
+            className="rounded-full border border-zinc-200 dark:border-zinc-800"
             width={55}
             height={55}
             alt="Profil photo"
@@ -32,7 +32,7 @@ export default function Home() {
             <p className="font-light">@ekorahy</p>
           </div>
         </div>
-        <p className="mb-2 text-xl font-bold text-slate-950 dark:text-white">
+        <p className="mb-2 text-xl font-bold text-zinc-950 dark:text-white">
           Hi, I&apos;m Eko{" "}
           <span className="inline-block animate-wave text-3xl">👋</span>
         </p>
@@ -45,33 +45,33 @@ export default function Home() {
           Working within the React ecosystem for front-end web development and
           Kotlin for mobile app development (Android).
         </p>
-        <q className="block w-full rounded-md bg-slate-50 px-4 py-2 italic dark:bg-slate-950">
+        <q className="block w-full rounded-md bg-zinc-100 px-4 py-2 italic dark:bg-zinc-900">
           Manifesting ideas into digital reality that are easily accessible and
           inclusive for user.
         </q>
         <div className="my-4 flex items-center gap-2">
           <span className="relative flex h-3 w-3">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-r from-lime-200 to-cyan-400 opacity-75"></span>
-            <span className="relative inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-lime-200 to-cyan-400"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gradient-to-r from-emerald-200 to-cyan-400 opacity-75"></span>
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-emerald-200 to-cyan-400"></span>
           </span>
-          <p className="bg-gradient-to-r from-lime-200 to-cyan-400 bg-clip-text text-transparent">
+          <p className="bg-gradient-to-r from-emerald-200 to-cyan-400 bg-clip-text text-transparent">
             Available for opportunities.
           </p>
         </div>
         <div className="flex items-center gap-4">
           <Link
-            href="/"
-            className="flex items-center gap-2 rounded-md bg-gradient-to-r from-lime-200 to-cyan-400 px-4 py-3 text-white hover:from-lime-300 hover:to-cyan-500 dark:text-slate-950"
+            href="mailto:ekorahy@gmail.com"
+            className="flex items-center gap-2 rounded-md bg-gradient-to-r from-emerald-200 to-cyan-400 px-4 py-3 font-bold text-white hover:from-emerald-300 hover:to-cyan-500 dark:from-emerald-300 dark:to-cyan-500 dark:text-zinc-950 dark:hover:from-emerald-200 dark:hover:to-cyan-400"
           >
             <BiLogoGmail className="text-xl" />
             Email Me
           </Link>
-          <Link
-            href="/"
-            className="flex items-center gap-1 hover:text-slate-950 dark:hover:text-white"
-          >
-            <MdFileDownload className="text-xl" />
-            Download CV
+          <Link href="/" className="group relative flex items-center gap-1">
+            <MdFileDownload className="text-xl group-hover:text-zinc-950 dark:group-hover:text-white" />
+            <span className="group-hover:text-zinc-950 dark:text-zinc-500 dark:group-hover:text-white">
+              Download CV
+            </span>
+            <span className="absolute bottom-0 left-0 h-0.5 w-full origin-bottom-right scale-x-0 transform bg-gradient-to-r from-emerald-200 to-cyan-400 transition-transform duration-300 group-hover:origin-bottom-left group-hover:scale-x-100"></span>
           </Link>
         </div>
       </ContentSection>

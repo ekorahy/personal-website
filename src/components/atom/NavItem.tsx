@@ -21,18 +21,18 @@ export default function NavItem({
     <Link
       href={linkTo}
       className={clsx(
-        "font-bold flex items-center gap-2 text-slate-950 dark:text-white sm:rounded-md sm:px-5 sm:py-2 sm:hover:bg-slate-200 dark:sm:hover:bg-slate-950",
+        "flex items-center gap-2 font-bold text-zinc-950 dark:text-white sm:rounded-md sm:px-5 sm:py-2 sm:hover:bg-zinc-200 dark:sm:hover:bg-zinc-800",
         {
-          "sm:bg-gradient-to-r sm:from-lime-200 sm:to-cyan-400":
+          "sm:bg-gradient-to-r sm:from-emerald-200 sm:to-cyan-400 dark:sm:from-emerald-300 dark:sm:to-cyan-500":
             pathname === linkTo,
         },
       )}
     >
       <div
         className={clsx(
-          "sm:hover:bg-transparant w-max rounded-full bg-slate-950 p-1.5 text-2xl text-white hover:bg-slate-100 hover:text-slate-950 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-950 dark:hover:text-white sm:bg-transparent sm:text-slate-950 sm:hover:bg-transparent dark:sm:bg-transparent dark:sm:text-white",
+          "sm:hover:bg-transparant w-max rounded-full bg-zinc-950 p-1.5 text-2xl text-white hover:bg-zinc-200 hover:text-zinc-950 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-white sm:bg-transparent sm:text-zinc-950 sm:hover:bg-transparent dark:sm:bg-transparent dark:sm:text-white",
           {
-            "bg-gradient-to-r from-lime-200 to-cyan-400 sm:bg-none":
+            "bg-gradient-to-r from-emerald-200 to-cyan-400 dark:from-emerald-300 dark:to-cyan-500 sm:bg-none":
               pathname === linkTo,
           },
         )}

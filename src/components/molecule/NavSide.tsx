@@ -5,13 +5,13 @@ import { ToggleTheme } from "../atom/ToggleTheme";
 
 export default function NavSide() {
   return (
-    <aside className="fixed hidden h-screen border-r px-6 sm:block">
+    <aside className="fixed hidden h-screen px-6 sm:block">
       <div className="flex h-screen flex-col justify-between">
         <div>
-          <div className="flex gap-2 border-b border-dashed pb-6">
+          <div className="flex gap-2 border-b border-dashed border-zinc-200 pb-6 dark:border-zinc-800">
             <Image
               src="/profile.jpg"
-              className="rounded-full"
+              className="rounded-full border border-zinc-200 dark:border-zinc-800"
               width={48}
               height={48}
               alt="Profil photo"
@@ -19,7 +19,9 @@ export default function NavSide() {
               priority={true}
             />
             <div className="flex flex-col justify-center">
-              <h1 className="font-bold text-slate-950 dark:text-white">Ekorahy</h1>
+              <h1 className="font-bold text-zinc-950 dark:text-white">
+                Ekorahy
+              </h1>
               <p className="text-sm font-light">@ekorahy</p>
             </div>
           </div>
