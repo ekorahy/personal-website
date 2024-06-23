@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <article>
-      <HeaderPage
-        title="Projects"
-        description="Showcase my works on front-end development."
-      />
+      <HeaderPage title="Projects" description="Showcasing my works." />
       <ContentSection>
         <ProjectList />
       </ContentSection>

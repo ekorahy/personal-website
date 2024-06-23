@@ -8,7 +8,7 @@ export default function NavSide() {
     <aside className="fixed hidden h-screen px-6 sm:block">
       <div className="flex h-screen flex-col justify-between">
         <div>
-          <div className="flex gap-2 border-b border-dashed border-zinc-200 pb-6 dark:border-zinc-800">
+          <div className="flex gap-2 border-b border-dashed border-zinc-200 pb-7 dark:border-zinc-800">
             <Image
               src="/profile.jpg"
               className="rounded-full border border-zinc-200 dark:border-zinc-800"

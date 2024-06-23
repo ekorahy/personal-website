@@ -12,6 +12,7 @@ export const projects = [
   {
     id: "project-1",
     name: "DisfoHub",
+    category: "Web App",
     image: "/projects/project-1.png",
     description:
       "The discussion forum app is the result of a project submission in the React Expert class organized by Dicoding.",
