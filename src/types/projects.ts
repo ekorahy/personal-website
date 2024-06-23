@@ -9,6 +9,7 @@ export type Project = {
   id: string;
   name: string;
   image: string;
+  category: string;
   description: string;
   linkDemo: string;
   techStack: TechStack[];

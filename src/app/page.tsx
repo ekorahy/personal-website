@@ -37,17 +37,17 @@ export default function Home() {
           <span className="inline-block animate-wave text-3xl">👋</span>
         </p>
         <ul className="mx-4 mb-2 list-disc">
-          <li>Front-end Engineer.</li>
+          <li>Front-end Developer.</li>
           <li>Tech Enthusiast.</li>
           <li>Lifelong Learner.</li>
         </ul>
         <p className="mb-4">
           Working within the React ecosystem for front-end web development and
-          Kotlin for mobile app development (Android).
+          using Kotlin for mobile app development (Android).
         </p>
         <q className="block w-full rounded-md bg-zinc-100 px-4 py-2 italic dark:bg-zinc-900">
-          Manifesting ideas into digital reality that are easily accessible and
-          inclusive for user.
+          Manifesting ideas into digital realities that are easily accessible
+          and inclusive for users
         </q>
         <div className="my-4 flex items-center gap-2">
           <span className="relative flex h-3 w-3">
@@ -55,7 +55,7 @@ export default function Home() {
             <span className="relative inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-emerald-200 to-cyan-400"></span>
           </span>
           <p className="bg-gradient-to-r from-emerald-200 to-cyan-400 bg-clip-text text-transparent">
-            Available for opportunities.
+            Open to new opportunities.
           </p>
         </div>
         <div className="flex items-center gap-4">
@@ -80,7 +80,7 @@ export default function Home() {
         <CareerList />
       </ContentSection>
       <ContentSection>
-        <TitleSection title="Tech Stack" icon={<FaCode />} />
+        <TitleSection title="Tech Stacks" icon={<FaCode />} />
         <TechList />
         <TechList direction="right" />
       </ContentSection>

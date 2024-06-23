@@ -18,7 +18,7 @@ export default async function Page() {
     <article>
       <HeaderPage
         title="Blog"
-        description="Share my thoughts and tutorials about software engineering."
+        description="Share my thoughts, personal stories, tips, tricks, tech reviews, and tutorials."
       />
       <ContentSection>
         <BlogList blog={blog} />

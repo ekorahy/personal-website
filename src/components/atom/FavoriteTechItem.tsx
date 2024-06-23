@@ -14,7 +14,7 @@ export default function FavoriteTechItem({
       <span className="text-4xl" style={{ color: color }}>
         {logo}
       </span>
-      <span className="absolute -top-10 left-0 rounded-md bg-slate-50 px-2 py-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:-left-4">
+      <span className="absolute -top-10 left-0 rounded-md bg-zinc-200 px-2 py-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-zinc-800 sm:-left-4">
         {name}
       </span>
     </div>
