@@ -18,7 +18,7 @@ export default function ProjectItem({
   techStack: TechStack[];
 }) {
   return (
-    <section className="rounded-md p-6 shadow-md dark:shadow-white">
+    <section className="rounded-md border border-zinc-200 p-6 pb-6 dark:border-zinc-800">
       <Image
         className="mb-4 w-full"
         src={image}
@@ -29,10 +29,14 @@ export default function ProjectItem({
         unoptimized
       />
       <div className="mb-4">
-        <h3 className="mb-2 text-lg font-bold hover:text-slate-950 dark:hover:text-white">
-          <Link href={linkDemo} className="flex items-center gap-1">
+        <h3 className="mb-2 w-max text-lg font-bold">
+          <Link
+            href={linkDemo}
+            className="group relative flex items-center gap-1 hover:text-zinc-950 dark:hover:text-white"
+          >
             {name}
             <GoArrowUpRight className="text-xl" />
+            <span className="absolute bottom-0 left-0 h-0.5 w-full origin-bottom-right scale-x-0 transform bg-gradient-to-r from-emerald-200 to-cyan-400 transition-transform duration-300 group-hover:origin-bottom-left group-hover:scale-x-100"></span>
           </Link>
         </h3>
         <p>{description}</p>

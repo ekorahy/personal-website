@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} text-slate-500`}>
+      <body className={`${inter.className} text-zinc-700 dark:text-zinc-500 dark:bg-zinc-950`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -34,7 +34,7 @@ export default function RootLayout({
               <footer className="mt-8">
                 <NavFooterList />
                 <div className="mx-auto mb-8 mt-12 w-max">
-                  <h3 className="mb-2 text-center font-bold text-slate-950 dark:text-white">
+                  <h3 className="mb-2 text-center font-bold text-zinc-950 dark:text-white">
                     Reach me out
                   </h3>
                   <div className="flex items-center justify-center gap-2 text-4xl">

@@ -17,7 +17,7 @@ export default function CareerItem({
   link: string;
 }) {
   return (
-    <section className="w-full rounded-md border p-4">
+    <section className="w-full rounded-md border border-zinc-200 p-4 pb-6 dark:border-zinc-800">
       <div className="flex gap-4">
         <div className="flex items-center">
           <Image
@@ -31,9 +31,14 @@ export default function CareerItem({
           />
         </div>
         <div>
-          <h4 className="font-semibold text-slate-950 dark:text-white">{position}</h4>
+          <h4 className="font-semibold text-slate-950 dark:text-white">
+            {position}
+          </h4>
           <div className="gap-2 sm:flex">
-            <Link className="underline hover:text-slate-950 dark:hover:text-white" href={link}>
+            <Link
+              className="underline hover:text-slate-950 dark:hover:text-white"
+              href={link}
+            >
               {company}
             </Link>
             <p>
