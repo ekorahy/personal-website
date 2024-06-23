@@ -3,6 +3,11 @@ import ContentSection from "@/components/molecule/ContentSection";
 import FavoriteTechList from "@/components/molecule/FavoriteTechList";
 import HeaderPage from "@/components/molecule/HeaderPage";
 import { RxRocket } from "react-icons/rx";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function Page() {
   return (
@@ -28,7 +33,10 @@ export default function Page() {
         </p>
       </ContentSection>
       <ContentSection>
-        <TitleSection title="My Current Favorite Tech Stack" icon={<RxRocket />} />
+        <TitleSection
+          title="My Current Favorite Tech Stack"
+          icon={<RxRocket />}
+        />
         <FavoriteTechList />
       </ContentSection>
     </article>

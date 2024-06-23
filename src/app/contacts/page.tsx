@@ -6,6 +6,12 @@ import SocialMediaList from "@/components/molecule/SocialMediaList";
 import { BiNetworkChart } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
+
 export default function Page() {
   return (
     <article>

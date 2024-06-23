@@ -3,8 +3,13 @@ import ContentSection from "@/components/molecule/ContentSection";
 import HeaderPage from "@/components/molecule/HeaderPage";
 import { getBlog } from "@/data/remote/blog";
 import { blogCard } from "@/types/blog";
+import { Metadata } from "next";
 
 export const revalidate = 30;
+
+export const metadata: Metadata = {
+  title: "Blog",
+};
 
 export default async function Page() {
   const blog: blogCard[] = await getBlog();

@@ -7,8 +7,20 @@ import NavFooterList from "@/components/molecule/NavFooterList";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
+import { Metadata } from "next";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Ekorahy",
+    default: "Personal Website | Ekorahy",
+  },
+  description: "Personal website of ekorahy",
+  keywords: ["personal website", "portfolio", "front-end developer"],
+  icons: "/logo.png",
+};
 
 export default function RootLayout({
   children,
@@ -17,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} text-zinc-700 dark:text-zinc-500 dark:bg-zinc-950`}>
+      <body
+        className={`${inter.className} text-zinc-700 dark:bg-zinc-950 dark:text-zinc-500`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
