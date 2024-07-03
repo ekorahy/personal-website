@@ -15,15 +15,17 @@ export default function BlogItem({
 }) {
   return (
     <section className="overflow-hidden rounded-md border border-zinc-200 dark:border-zinc-800">
-      <Image
-        className="w-full"
-        src={urlFor(titleImage).url()}
-        width={100}
-        height={100}
-        alt={`${title} image`}
-        unoptimized
-        priority={true}
-      />
+      <div className="relative mb-4 overflow-hidden">
+        <Image
+          className="w-full transform transition-transform duration-300 hover:scale-125"
+          src={urlFor(titleImage).url()}
+          width={100}
+          height={100}
+          alt={`${title} image`}
+          unoptimized
+          priority={true}
+        />
+      </div>
       <div className="my-2 px-4">
         <h3 className="relative mb-2 block w-max text-lg font-bold">
           <Link

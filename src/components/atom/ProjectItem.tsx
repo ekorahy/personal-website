@@ -22,15 +22,17 @@ export default function ProjectItem({
   return (
     <section className="overflow-hidden rounded-md border border-zinc-200 pb-6 dark:border-zinc-800">
       <div className="relative h-full pb-8">
-        <Image
-          className="mb-4 w-full"
-          src={image}
-          width={100}
-          height={100}
-          alt={`${name} image`}
-          priority={true}
-          unoptimized
-        />
+        <div className="relative overflow-hidden mb-4">
+          <Image
+            className="w-full transform transition-transform duration-300 hover:scale-125"
+            src={image}
+            width={100}
+            height={100}
+            alt={`${name} image`}
+            priority={true}
+            unoptimized
+          />
+        </div>
         <div className="mb-4 px-6">
           <h3 className="mb-1 w-max text-lg font-bold">
             <Link
