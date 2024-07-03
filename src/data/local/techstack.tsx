@@ -18,6 +18,8 @@ import {
   SiReactrouter,
   SiVite,
   SiVitest,
+  SiEslint,
+  SiReacthookform,
 } from "react-icons/si";
 import { BsFiletypeXml } from "react-icons/bs";
 
@@ -56,7 +58,7 @@ export const techStack = [
     id: "tech-6",
     name: "Tailwind",
     logo: <SiTailwindcss />,
-    color: "#0ED7B5",
+    color: "#06B6D4",
   },
   {
     id: "tech-7",
@@ -90,12 +92,18 @@ export const techStack = [
   },
   {
     id: "tech-12",
+    name: "React Hook Form",
+    logo: <SiReacthookform />,
+    color: "#EC5990",
+  },
+  {
+    id: "tech-13",
     name: "Jest",
     logo: <SiJest />,
     color: "#99424F",
   },
   {
-    id: "tech-13",
+    id: "tech-14",
     name: "Cypress",
     logo: <SiCypress />,
     color: "#00BF9A",
@@ -141,5 +149,11 @@ export const techStack = [
     name: "Vitest",
     logo: <SiVitest />,
     color: "#6EBC00",
+  },
+  {
+    id: "tech-22",
+    name: "Eslint",
+    logo: <SiEslint />,
+    color: "#4B32C3",
   },
 ];
