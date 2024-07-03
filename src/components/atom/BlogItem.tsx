@@ -14,7 +14,7 @@ export default function BlogItem({
   titleImage: any;
 }) {
   return (
-    <section className="rounded-md border border-zinc-200 p-4 dark:border-zinc-800">
+    <section className="overflow-hidden rounded-md border border-zinc-200 dark:border-zinc-800">
       <Image
         className="w-full"
         src={urlFor(titleImage).url()}
@@ -24,8 +24,8 @@ export default function BlogItem({
         unoptimized
         priority={true}
       />
-      <div className="my-2">
-        <h3 className="w-max mb-2 relative block text-lg font-bold">
+      <div className="my-2 px-4">
+        <h3 className="relative mb-2 block w-max text-lg font-bold">
           <Link
             href={`/blog/${currentSlug}`}
             className="group inline-block hover:text-zinc-950 dark:hover:text-white"
@@ -34,7 +34,7 @@ export default function BlogItem({
             <span className="absolute bottom-0 left-0 h-0.5 w-full origin-bottom-right scale-x-0 transform bg-gradient-to-r from-emerald-200 to-cyan-400 transition-transform duration-300 group-hover:origin-bottom-left group-hover:scale-x-100"></span>
           </Link>
         </h3>
-        <p className="line-clamp-3">{smallDescription}</p>
+        <p className="line-clamp-3 text-justify">{smallDescription}</p>
       </div>
     </section>
   );

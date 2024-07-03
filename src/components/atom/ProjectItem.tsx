@@ -20,18 +20,18 @@ export default function ProjectItem({
   techStack: TechStack[];
 }) {
   return (
-    <section className="rounded-md border border-zinc-200 p-6 pb-6 dark:border-zinc-800">
+    <section className="overflow-hidden rounded-md border border-zinc-200 pb-6 dark:border-zinc-800">
       <div className="relative h-full pb-8">
         <Image
           className="mb-4 w-full"
           src={image}
           width={100}
           height={100}
-          alt={`${name} imaage`}
+          alt={`${name} image`}
           priority={true}
           unoptimized
         />
-        <div className="mb-4">
+        <div className="mb-4 px-6">
           <h3 className="mb-1 w-max text-lg font-bold">
             <Link
               href={linkDemo}
@@ -45,7 +45,7 @@ export default function ProjectItem({
           <p className="mb-2 bg-gradient-to-r from-emerald-200 to-cyan-400 bg-clip-text text-transparent dark:from-emerald-300 dark:to-cyan-500">
             {category}
           </p>
-          <p>{description}</p>
+          <p className="text-justify">{description}</p>
         </div>
         <TechStackList techStack={techStack} />
       </div>
