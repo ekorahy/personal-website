@@ -66,7 +66,11 @@ export default function Home() {
             <BiLogoGmail className="text-xl" />
             Email Me
           </Link>
-          <Link href="/" className="group relative flex items-center gap-1">
+          <Link
+            href="/docs/CV.pdf"
+            download
+            className="group relative flex items-center gap-1"
+          >
             <MdFileDownload className="text-xl group-hover:text-zinc-950 dark:group-hover:text-white" />
             <span className="group-hover:text-zinc-950 dark:text-zinc-500 dark:group-hover:text-white">
               Download CV
