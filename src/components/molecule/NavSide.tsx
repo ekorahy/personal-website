@@ -12,10 +12,9 @@ export default function NavSide() {
             <Image
               src="/profile.jpg"
               className="rounded-full border border-zinc-200 dark:border-zinc-800"
-              width={48}
-              height={48}
+              width={46.667}
+              height={46.667}
               alt="Profil photo"
-              unoptimized
               priority={true}
             />
             <div className="flex flex-col justify-center">
