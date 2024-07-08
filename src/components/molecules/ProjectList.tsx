@@ -1,6 +1,5 @@
 import { projects } from "@/data/local/projects";
-import ProjectItem from "../atom/ProjectItem";
-import { ProjectsList } from "@/types/projects";
+import ProjectItem from "../atoms/ProjectItem";
 
 export default function ProjectList() {
   return (

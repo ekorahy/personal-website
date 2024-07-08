@@ -1,5 +1,6 @@
 "use client";
 
+import { NavItemProps } from "@/types";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,12 +11,7 @@ export default function NavItem({
   icon,
   linkTo,
   category,
-}: {
-  name: string;
-  icon: React.ReactNode;
-  linkTo: string;
-  category: "navbar" | "navside";
-}) {
+}: NavItemProps) {
   const pathname = usePathname();
   return (
     <Link

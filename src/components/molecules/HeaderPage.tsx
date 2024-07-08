@@ -1,16 +1,11 @@
 "use client";
 
-import DescriptionPage from "../atom/DescriptionPage";
-import TitlePage from "../atom/TitlePage";
+import { HeaderPageProps } from "@/types";
 import { motion } from "framer-motion";
+import TitlePage from "../atoms/TitlePage";
+import DescriptionPage from "../atoms/DescriptionPage";
 
-export default function HeaderPage({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) {
+export default function HeaderPage({ title, description }: HeaderPageProps) {
   return (
     <motion.header
       initial={{ opacity: 0, y: -50 }}

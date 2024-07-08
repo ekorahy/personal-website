@@ -1,4 +1,4 @@
-import { client } from "@/lib/sanity";
+import { client } from "@/utils/sanity";
 
 export async function getBlog() {
   const query = `

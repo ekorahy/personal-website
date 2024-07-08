@@ -1,7 +1,7 @@
 import { navItems } from "@/data/local/navigation";
-import NavItem from "../atom/NavItem";
+import NavItem from "../atoms/NavItem";
 import Image from "next/image";
-import { ToggleTheme } from "../atom/ToggleTheme";
+import { ToggleTheme } from "../atoms/ToggleTheme";
 
 export default function NavSide() {
   return (

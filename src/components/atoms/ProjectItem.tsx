@@ -1,8 +1,8 @@
-import { TechStack } from "@/types/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
-import TechStackList from "../molecule/TechStackList";
+import TechStackList from "../molecules/TechStackList";
+import { ProjectItemProps } from "@/types";
 
 export default function ProjectItem({
   name,
@@ -11,14 +11,7 @@ export default function ProjectItem({
   description,
   linkDemo,
   techStack,
-}: {
-  name: string;
-  category: string;
-  image: string;
-  description: string;
-  linkDemo: string;
-  techStack: TechStack[];
-}) {
+}: ProjectItemProps) {
   return (
     <section className="overflow-hidden rounded-md border border-zinc-200 pb-6 dark:border-zinc-800">
       <div className="relative h-full pb-8">

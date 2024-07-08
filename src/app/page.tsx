@@ -1,13 +1,13 @@
-import { TechList } from "@/components/molecule/TechList";
-import TitleSection from "@/components/atom/TitleSection";
-import CareerList from "@/components/molecule/CareerList";
-import HeaderPage from "@/components/molecule/HeaderPage";
+import { TechList } from "@/components/molecules/TechList";
+import TitleSection from "@/components/atoms/TitleSection";
+import CareerList from "@/components/molecules/CareerList";
+import HeaderPage from "@/components/molecules/HeaderPage";
 import Image from "next/image";
 import Link from "next/link";
 import { BiLogoGmail } from "react-icons/bi";
 import { MdOutlineWorkHistory, MdFileDownload } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
-import ContentSection from "@/components/molecule/ContentSection";
+import ContentSection from "@/components/molecules/ContentSection";
 
 export default function Home() {
   return (
@@ -36,13 +36,13 @@ export default function Home() {
           <span className="inline-block animate-wave text-3xl">👋</span>
         </p>
         <ul className="mx-4 mb-2 list-disc">
-          <li>Front-end Developer.</li>
+          <li>Front-end Engineer.</li>
           <li>Tech Enthusiast.</li>
           <li>Lifelong Learner.</li>
         </ul>
         <p className="mb-4">
           Working within the React ecosystem for front-end web development and
-          using Kotlin for mobile app development (Android).
+          using Kotlin for mobile app development (Android Native).
         </p>
         <q className="block w-full rounded-md bg-zinc-100 px-4 py-2 italic dark:bg-zinc-900">
           Manifesting ideas into digital realities that are easily accessible

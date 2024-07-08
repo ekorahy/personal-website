@@ -1,14 +1,11 @@
+import { TechItemProps } from "@/types";
 import React from "react";
 
 export default function TechStackItem({
   name,
   logo,
   color,
-}: {
-  name: string;
-  logo: React.ReactNode;
-  color: string;
-}) {
+}: TechItemProps) {
   return (
     <div className="group relative">
       <span className="text-3xl" style={{ color: color }}>

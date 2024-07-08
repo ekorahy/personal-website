@@ -1,7 +1,7 @@
-import { blogCard } from "@/types/blog";
-import BlogItem from "../atom/BlogItem";
+import { BlogListProps } from "@/types";
+import BlogItem from "../atoms/BlogItem";
 
-export default function BlogList({ blog }: { blog: blogCard[] }) {
+export default function BlogList({ blog }: BlogListProps) {
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
       {blog.map((post, idx) => (

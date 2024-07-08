@@ -1,12 +1,9 @@
 "use client";
 
+import { ContentSectionProps } from "@/types";
 import { motion } from "framer-motion";
 
-export default function ContentSection({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ContentSection({ children }: ContentSectionProps) {
   return (
     <motion.section
       className="border-b border-zinc-200 py-8 pb-6 dark:border-zinc-800"

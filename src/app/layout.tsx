@@ -1,24 +1,35 @@
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import NavBar from "@/components/molecule/NavBar";
-import NavSide from "@/components/molecule/NavSide";
+import NavBar from "@/components/molecules/NavBar";
+import NavSide from "@/components/molecules/NavSide";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import NavFooterList from "@/components/molecule/NavFooterList";
+import NavFooterList from "@/components/molecules/NavFooterList";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
 import { Metadata } from "next";
-import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
     template: "%s | Ekorahy",
-    default: "Personal Website | Ekorahy",
+    default: "Ekorahy | Front-End Engineer",
   },
-  description: "Personal website of ekorahy",
-  keywords: ["personal website", "portfolio", "front-end developer"],
+  description:
+    "Explore the portfolio and projects of Eko Rahayu Widodo, a skilled Front-End Engineer specializing in modern web technologies.",
+  keywords: [
+    "Front-end Engineer",
+    "Web Developer",
+    "Portfolio",
+    "Personal Website",
+    "Eko Rahayu Widodo",
+    "React.js",
+    "JavaScript",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+  ],
   icons: "/logo.png",
 };
 

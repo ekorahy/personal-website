@@ -1,3 +1,4 @@
+import { CareerItemProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,14 +9,7 @@ export default function CareerItem({
   type,
   logo,
   link,
-}: {
-  company: string;
-  position: string;
-  duration: string;
-  type: string;
-  logo: string;
-  link: string;
-}) {
+}: CareerItemProps) {
   return (
     <section className="w-full rounded-md border border-zinc-200 p-4 pb-6 dark:border-zinc-800">
       <div className="flex gap-4">

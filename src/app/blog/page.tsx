@@ -1,8 +1,8 @@
-import BlogList from "@/components/molecule/BlogList";
-import ContentSection from "@/components/molecule/ContentSection";
-import HeaderPage from "@/components/molecule/HeaderPage";
+import BlogList from "@/components/molecules/BlogList";
+import ContentSection from "@/components/molecules/ContentSection";
+import HeaderPage from "@/components/molecules/HeaderPage";
 import { getBlog } from "@/data/remote/blog";
-import { blogCard } from "@/types/blog";
+import { BlogCard } from "@/types";
 import { Metadata } from "next";
 
 export const revalidate = 30;
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const blog: blogCard[] = await getBlog();
+  const blog: BlogCard[] = await getBlog();
 
   return (
     <article>
