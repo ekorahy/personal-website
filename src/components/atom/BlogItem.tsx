@@ -19,8 +19,8 @@ export default function BlogItem({
         <Image
           className="w-full transform transition-transform duration-300 hover:scale-125"
           src={urlFor(titleImage).url()}
-          width={100}
-          height={100}
+          width={358.667}
+          height={239.750}
           alt={`${title} image`}
           unoptimized
           priority={true}

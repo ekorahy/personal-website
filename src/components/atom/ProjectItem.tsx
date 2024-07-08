@@ -26,8 +26,8 @@ export default function ProjectItem({
           <Image
             className="w-full transform transition-transform duration-300 hover:scale-125"
             src={image}
-            width={100}
-            height={100}
+            width={378}
+            height={302.396}
             alt={`${name} image`}
             priority={true}
             unoptimized

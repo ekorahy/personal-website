@@ -21,10 +21,9 @@ export default function Home() {
           <Image
             src="/profile.jpg"
             className="rounded-full border border-zinc-200 dark:border-zinc-800"
-            width={55}
-            height={55}
+            width={53.667}
+            height={53.667}
             alt="Profil photo"
-            unoptimized
             priority={true}
           />
           <div className="flex flex-col justify-center">
