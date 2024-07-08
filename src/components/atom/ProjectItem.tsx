@@ -37,7 +37,7 @@ export default function ProjectItem({
           <h3 className="mb-1 w-max text-lg font-bold">
             <Link
               href={linkDemo}
-              className="group relative flex items-center gap-1 hover:text-zinc-950 dark:hover:text-white"
+              className="group relative flex items-center gap-1 hover:text-zinc-950 dark:text-zinc-200 dark:hover:text-zinc-50"
             >
               {name}
               <GoArrowUpRight className="text-xl" />
