@@ -22,12 +22,12 @@ export default function ProjectItem({
   return (
     <section className="overflow-hidden rounded-md border border-zinc-200 pb-6 dark:border-zinc-800">
       <div className="relative h-full pb-8">
-        <div className="relative overflow-hidden mb-4">
+        <div className="relative mb-4 overflow-hidden">
           <Image
-            className="w-full transform transition-transform duration-300 hover:scale-125"
+            className="h-60 w-full transform object-cover transition-transform duration-300 hover:scale-125 sm:h-80"
             src={image}
-            width={378}
-            height={302.396}
+            width={486.667}
+            height={320}
             alt={`${name} image`}
             priority={true}
             unoptimized

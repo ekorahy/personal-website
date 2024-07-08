@@ -17,10 +17,10 @@ export default function BlogItem({
     <section className="overflow-hidden rounded-md border border-zinc-200 dark:border-zinc-800">
       <div className="relative mb-4 overflow-hidden">
         <Image
-          className="w-full transform transition-transform duration-300 hover:scale-125"
+          className="h-60 w-full transform transition-transform duration-300 hover:scale-125 sm:h-80"
           src={urlFor(titleImage).url()}
-          width={358.667}
-          height={239.750}
+          width={486.667}
+          height={320}
           alt={`${title} image`}
           unoptimized
           priority={true}

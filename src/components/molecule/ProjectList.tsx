@@ -4,7 +4,7 @@ import { ProjectsList } from "@/types/projects";
 
 export default function ProjectList() {
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
       {projects.map(
         ({ id, name, category, image, description, linkDemo, techStack }) => (
           <ProjectItem

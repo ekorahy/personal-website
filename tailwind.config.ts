@@ -42,6 +42,9 @@ const config: Config = {
           '100%': { transform: 'rotate(0.0deg)' },
         },
       },
+      container: {
+        center: true,
+      },
     },
   },
   plugins: [addVariablesForColors, require("@tailwindcss/typography")],
