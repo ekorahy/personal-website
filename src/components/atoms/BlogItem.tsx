@@ -1,4 +1,5 @@
-import { urlFor } from "@/lib/sanity";
+import { BlogCard } from "@/types";
+import { urlFor } from "@/utils/sanity";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,12 +8,7 @@ export default function BlogItem({
   smallDescription,
   currentSlug,
   titleImage,
-}: {
-  title: string;
-  smallDescription: string;
-  currentSlug: string;
-  titleImage: any;
-}) {
+}: BlogCard) {
   return (
     <section className="overflow-hidden rounded-md border border-zinc-200 dark:border-zinc-800">
       <div className="relative mb-4 overflow-hidden">

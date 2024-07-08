@@ -1,6 +1,6 @@
-import ContentSection from "@/components/molecule/ContentSection";
-import HeaderPage from "@/components/molecule/HeaderPage";
-import NotFoundTemplate from "@/components/molecule/NotFoundTemplate";
+import ContentSection from "@/components/molecules/ContentSection";
+import HeaderPage from "@/components/molecules/HeaderPage";
+import NotFoundTemplate from "@/components/molecules/NotFoundTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

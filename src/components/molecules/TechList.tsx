@@ -1,21 +1,17 @@
 "use client";
 
-import { techStack } from "@/data/local/techstack";
+import { techStack } from "@/data/local/tech-stack";
 import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
-import TechItem from "../atom/TechItem";
+import TechItem from "../atoms/TechItem";
+import { TechListProps } from "@/types";
 
 export function TechList({
   direction = "left",
   speed = "slow",
   pauseOnHover = true,
   className,
-}: {
-  direction?: "left" | "right";
-  speed?: "fast" | "normal" | "slow";
-  pauseOnHover?: boolean;
-  className?: string;
-}) {
+}: TechListProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 

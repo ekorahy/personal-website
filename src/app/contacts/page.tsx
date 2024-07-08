@@ -1,11 +1,11 @@
-import TitleSection from "@/components/atom/TitleSection";
-import ContentSection from "@/components/molecule/ContentSection";
-import HeaderPage from "@/components/molecule/HeaderPage";
-import SocialMediaList from "@/components/molecule/SocialMediaList";
+import TitleSection from "@/components/atoms/TitleSection";
+import ContentSection from "@/components/molecules/ContentSection";
+import HeaderPage from "@/components/molecules/HeaderPage";
+import SocialMediaList from "@/components/molecules/SocialMediaList";
 import { BiNetworkChart } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
 import { Metadata } from "next";
-import EmailInput from "@/components/molecule/EmailInput";
+import EmailInput from "@/components/molecules/EmailInput";
 
 export const metadata: Metadata = {
   title: "Contact",

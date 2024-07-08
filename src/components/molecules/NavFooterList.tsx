@@ -1,5 +1,5 @@
-import { navFooter } from "@/data/local/navfooter";
-import NavFooterItem from "../atom/NavFooterItem";
+import { navFooter } from "@/data/local/nav-footer";
+import NavFooterItem from "../atoms/NavFooterItem";
 
 export default function NavFooterList() {
   return (

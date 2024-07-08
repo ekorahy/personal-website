@@ -1,14 +1,11 @@
+import { FavoriteTechItemProps } from "@/types";
 import React from "react";
 
 export default function FavoriteTechItem({
   name,
   logo,
   color,
-}: {
-  name: string;
-  logo: React.ReactNode;
-  color: string;
-}) {
+}: FavoriteTechItemProps) {
   return (
     <div className="group relative">
       <span className="text-4xl" style={{ color: color }}>

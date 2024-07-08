@@ -1,13 +1,12 @@
-import ContentSection from "@/components/molecule/ContentSection";
-import HeaderPage from "@/components/molecule/HeaderPage";
-import NotFoundTemplate from "@/components/molecule/NotFoundTemplate";
+import ContentSection from "@/components/molecules/ContentSection";
+import HeaderPage from "@/components/molecules/HeaderPage";
+import NotFoundTemplate from "@/components/molecules/NotFoundTemplate";
 import { getBlogDetail } from "@/data/remote/blog";
-import { urlFor } from "@/lib/sanity";
-import { fullBlog } from "@/types/blog";
+import { FullBlog } from "@/types";
+import { urlFor } from "@/utils/sanity";
 import { Metadata } from "next";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
-import { notFound } from "next/navigation";
 
 export const revalidate = 30;
 
@@ -16,7 +15,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const blogDetail: fullBlog | null = await getBlogDetail(params.slug);
+  const blogDetail: FullBlog | null = await getBlogDetail(params.slug);
 
   if (!blogDetail) {
     return {
@@ -30,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const blogDetail: fullBlog | null = await getBlogDetail(params.slug);
+  const blogDetail: FullBlog | null = await getBlogDetail(params.slug);
 
   if (!blogDetail) {
     return (

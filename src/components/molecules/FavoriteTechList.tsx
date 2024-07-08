@@ -1,5 +1,5 @@
-import { favoriteTechs } from "@/data/local/favoritetechs";
-import FavoriteTechItem from "../atom/FavoriteTechItem";
+import { favoriteTechs } from "@/data/local/favorite-techs";
+import FavoriteTechItem from "../atoms/FavoriteTechItem";
 
 export default function FavoriteTechList() {
   return (

@@ -36,6 +36,9 @@ export default function EmailInput() {
     }
   });
 
+  const fieldInputClassName =
+    "w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800";
+
   return (
     <form ref={form} onSubmit={onSubmitHandler}>
       <div className="grid-cols-2 gap-4 md:grid">
@@ -44,7 +47,7 @@ export default function EmailInput() {
             Name
           </label>
           <input
-            className="w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
+            className={fieldInputClassName}
             id="name"
             type="text"
             {...register("name", { required: true })}
@@ -60,7 +63,7 @@ export default function EmailInput() {
             Email
           </label>
           <input
-            className="w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
+            className={fieldInputClassName}
             id="email"
             type="email"
             {...register("email", { required: true })}
@@ -77,7 +80,7 @@ export default function EmailInput() {
           Subject
         </label>
         <input
-          className="w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
+          className={fieldInputClassName}
           id="subject"
           type="text"
           {...register("subject", { required: true })}
@@ -93,7 +96,7 @@ export default function EmailInput() {
           Message
         </label>
         <textarea
-          className="min-h-28 w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800"
+          className={`min-h-28 ${fieldInputClassName}`}
           id="message"
           {...register("message", { required: true })}
         ></textarea>

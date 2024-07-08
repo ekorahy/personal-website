@@ -1,7 +1,7 @@
-import TitleSection from "@/components/atom/TitleSection";
-import ContentSection from "@/components/molecule/ContentSection";
-import FavoriteTechList from "@/components/molecule/FavoriteTechList";
-import HeaderPage from "@/components/molecule/HeaderPage";
+import TitleSection from "@/components/atoms/TitleSection";
+import ContentSection from "@/components/molecules/ContentSection";
+import FavoriteTechList from "@/components/molecules/FavoriteTechList";
+import HeaderPage from "@/components/molecules/HeaderPage";
 import { RxRocket } from "react-icons/rx";
 import { Metadata } from "next";
 import { MdConnectWithoutContact } from "react-icons/md";
@@ -20,11 +20,11 @@ export default function Page() {
           Persada Indonesia Y.A.I. During my studies, I learned a lot,
           especially in the discipline of software engineering. I have
           experience developing desktop applications using Java, full-stack web
-          development using PHP Native, Yii Framework, and JavaScript
-          libraries or frameworks such as React.js and Express.js. Additionally,
-          I have experience in mobile app development with Flutter
-          (multi-platform) and Kotlin (Android native), also developing
-          machine learning models using Python and TensorFlow.
+          development using PHP Native, Yii Framework, and JavaScript libraries
+          or frameworks such as React.js and Express.js. Additionally, I have
+          experience in mobile app development with Flutter (multi-platform) and
+          Kotlin (Android native), also developing machine learning models using
+          Python and TensorFlow.
         </p>
         <p className="mb-4">
           However, in recent years, I have decided to transition from being a
