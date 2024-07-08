@@ -71,7 +71,7 @@ export default function Home() {
             className="group relative flex items-center gap-1"
           >
             <MdFileDownload className="text-xl group-hover:text-zinc-950 dark:group-hover:text-white" />
-            <span className="group-hover:text-zinc-950 dark:text-zinc-500 dark:group-hover:text-white">
+            <span className="group-hover:text-zinc-950 dark:text-zinc-400 dark:group-hover:text-white">
               Download CV
             </span>
             <span className="absolute bottom-0 left-0 h-0.5 w-full origin-bottom-right scale-x-0 transform bg-gradient-to-r from-emerald-200 to-cyan-400 transition-transform duration-300 group-hover:origin-bottom-left group-hover:scale-x-100"></span>
