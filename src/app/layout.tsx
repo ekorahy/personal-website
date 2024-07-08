@@ -41,7 +41,7 @@ export default function RootLayout({
           <header className="fixed bottom-0 z-50 w-full sm:hidden">
             <NavBar />
           </header>
-          <main className="mx-auto mb-20 flex max-w-6xl gap-6 p-4 sm:mb-0 sm:p-8">
+          <main className="container mx-auto mb-20 flex gap-6 p-4 sm:mb-0 lg:p-8">
             <NavSide />
             <div className="w-full sm:pl-56">
               <div>{children}</div>
