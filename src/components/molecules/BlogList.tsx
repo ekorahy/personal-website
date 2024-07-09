@@ -11,6 +11,9 @@ export default function BlogList({ blog }: BlogListProps) {
           smallDescription={post.smallDescription}
           currentSlug={post.currentSlug}
           titleImage={post.titleImage}
+          readingTime={post.readingTime}
+          createdAt={post.createdAt}
+          tags={post.tags}
         />
       ))}
     </div>

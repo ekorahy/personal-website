@@ -85,7 +85,7 @@ export interface ContentSectionProps {
 
 export interface HeaderPageProps {
   title: string;
-  description: string;
+  description?: string;
 }
 
 export interface TechListProps {
@@ -100,6 +100,9 @@ export interface BlogCard {
   smallDescription: string;
   currentSlug: string;
   titleImage: any;
+  readingTime: string;
+  createdAt: string;
+  tags: string[];
 }
 
 export interface FullBlog {
@@ -107,6 +110,9 @@ export interface FullBlog {
   title: string;
   content: any;
   titleImage: any;
+  readingTime: string;
+  createdAt: string;
+  tags: string[];
 }
 
 export interface Project {
@@ -125,4 +131,12 @@ export interface BlogListProps {
 
 export interface TechStackListProps {
   techStack: TechStack[];
+}
+
+export interface TagListProps {
+  tags: string[];
+}
+
+export interface TagItemProps {
+  tag: string;
 }

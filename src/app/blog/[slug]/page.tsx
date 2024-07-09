@@ -1,14 +1,17 @@
 import ContentSection from "@/components/molecules/ContentSection";
 import HeaderPage from "@/components/molecules/HeaderPage";
 import NotFoundTemplate from "@/components/molecules/NotFoundTemplate";
+import TagList from "@/components/molecules/TagList";
 import { getBlogDetail } from "@/data/remote/blog";
 import { FullBlog } from "@/types";
+import formattedDate from "@/utils/formattedDate";
 import { urlFor } from "@/utils/sanity";
 import { Metadata } from "next";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import { IoMdTime } from "react-icons/io";
 
-export const revalidate = 30;
+export const revalidate = 3600;
 
 type Props = {
   params: { slug: string };
@@ -44,18 +47,41 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <HeaderPage title="Blog Detail" description={`${blogDetail.title}`} />
+      <HeaderPage title="Blog Detail" />
       <ContentSection>
-        <Image
-          className="w-full rounded-md"
-          src={urlFor(blogDetail.titleImage).url()}
-          width={100}
-          height={100}
-          alt={`${blogDetail.title} image`}
-          unoptimized
-          priority={true}
-        />
-        <div className="prose mt-8 !max-w-none text-zinc-700 dark:text-zinc-400 dark:prose-headings:text-white dark:prose-strong:text-white">
+        <div className="relative">
+          <Image
+            className="h-96 w-full rounded-md object-cover"
+            src={urlFor(blogDetail.titleImage).url()}
+            width={736}
+            height={384}
+            alt={`${blogDetail.title} image`}
+            unoptimized
+            priority={true}
+          />
+          <div className="absolute bottom-4 right-4">
+            <TagList tags={blogDetail.tags} />
+          </div>
+        </div>
+        <div className="mt-4">
+          <h2 className="text-2xl font-bold dark:text-white">
+            {blogDetail.title}
+          </h2>
+          <p className="mb-4">
+            Written on {formattedDate(blogDetail.createdAt)} by Ekorahy
+          </p>
+          <div className="flex items-center gap-6 font-light dark:text-white">
+            <p className="flex items-center gap-2">
+              <IoMdTime className="text-xl" />
+              <span className="bg-gradient-to-r from-emerald-200 to-cyan-400 px-1 dark:from-emerald-300 dark:to-cyan-500">
+                {blogDetail.readingTime} min read
+              </span>
+            </p>
+          </div>
+        </div>
+      </ContentSection>
+      <ContentSection>
+        <div className="prose !max-w-none text-zinc-700 dark:text-zinc-400 dark:prose-headings:text-white dark:prose-strong:text-white">
           <PortableText value={blogDetail.content} />
         </div>
       </ContentSection>
