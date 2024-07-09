@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <ContentSection>
         <div className="relative overflow-hidden rounded-md">
           <Image
-            className="h-96 w-full transform object-cover transition-transform duration-300 hover:scale-125"
+            className="h-60 w-full transform object-cover transition-transform duration-300 hover:scale-125 sm:h-96"
             src={urlFor(blogDetail.titleImage).url()}
             width={736}
             height={384}
