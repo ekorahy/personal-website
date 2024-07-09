@@ -17,6 +17,30 @@ export default {
       }
     },
     {
+      name: 'readingTime',
+      title: 'Reading Time',
+      type: 'string',
+    },
+    {
+      name: 'createdAt',
+      title: 'Created At',
+      type: 'date',
+      options: {
+        dateFormat: 'MM-DD-YYYY',
+        calenderTodayLabel: 'Today'
+      }
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [
+        {
+          type: 'string'
+        }
+      ]
+    },
+    {
       name: 'titleImage',
       type: 'image',
       title: 'Title Image',

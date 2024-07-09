@@ -1,27 +1,42 @@
 import { client } from "@/utils/sanity";
+import { groq } from "next-sanity";
 
 export async function getBlog() {
-  const query = `
+  try {
+    const query = `
   *[_type == 'blog'] | order(createdAt desc) {
   title,
     smallDescription,
     "currentSlug": slug.current,
-    titleImage
+    titleImage,
+    readingTime,
+    createdAt,
+    tags
   }`;
 
-  const data = await client.fetch(query);
-  return data;
+    const data = await client.fetch(query);
+    return data;
+  } catch (error) {
+    throw error;
+  }
 }
 
 export async function getBlogDetail(slug: string) {
-  const query = `
+  try {
+    const query = `
   *[_type == 'blog' && slug.current == '${slug}'] {
   'currentSlug': slug.current,
     title,
     content,
-    titleImage
+    titleImage,
+    readingTime,
+    tags,
+    createdAt
   }[0]`;
 
-  const data = await client.fetch(query);
-  return data;
+    const data = await client.fetch(query);
+    return data;
+  } catch (error) {
+    throw error;
+  }
 }

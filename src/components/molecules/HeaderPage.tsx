@@ -13,7 +13,7 @@ export default function HeaderPage({ title, description }: HeaderPageProps) {
       className="border-b border-dashed border-zinc-200 pb-6 dark:border-zinc-800"
     >
       <TitlePage title={title} />
-      <DescriptionPage description={description} />
+      {description && <DescriptionPage description={description} />}
     </motion.header>
   );
 }
