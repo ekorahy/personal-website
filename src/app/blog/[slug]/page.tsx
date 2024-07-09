@@ -49,9 +49,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <article>
       <HeaderPage title="Blog Detail" />
       <ContentSection>
-        <div className="relative">
+        <div className="relative overflow-hidden rounded-md">
           <Image
-            className="h-96 w-full rounded-md object-cover"
+            className="h-96 w-full transform object-cover transition-transform duration-300 hover:scale-125"
             src={urlFor(blogDetail.titleImage).url()}
             width={736}
             height={384}
