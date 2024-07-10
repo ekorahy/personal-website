@@ -31,7 +31,7 @@ export default function BlogItem({
           <TagList tags={tags} />
         </div>
       </div>
-      <div className="my-2 px-6">
+      <div className="my-2 px-6 pb-4">
         <div className="mb-2 flex items-center gap-6 font-light dark:text-white">
           <p className="flex items-center gap-2">
             <IoMdTime className="text-xl" />
