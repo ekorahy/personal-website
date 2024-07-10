@@ -66,7 +66,7 @@ export default function Home() {
             Email Me
           </Link>
           <Link
-            href="/docs/CV.pdf"
+            href="/docs/Latest_CV.pdf"
             download
             className="group relative flex items-center gap-1"
           >
