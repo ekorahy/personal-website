@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             unoptimized
             priority={true}
           />
-          <div className="absolute bottom-4 right-4">
+          <div className="absolute bottom-4 right-4 flex w-4/5 flex-wrap justify-end gap-2 lg:w-1/2">
             <TagList tags={blogDetail.tags} />
           </div>
         </div>
