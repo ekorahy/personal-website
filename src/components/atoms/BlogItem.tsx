@@ -27,7 +27,7 @@ export default function BlogItem({
           unoptimized
           priority={true}
         />
-        <div className="absolute bottom-4 right-4">
+        <div className="absolute bottom-4 right-4 flex w-4/5 flex-wrap justify-end gap-2">
           <TagList tags={tags} />
         </div>
       </div>
@@ -40,15 +40,16 @@ export default function BlogItem({
             </span>
           </p>
         </div>
-        <h3 className="relative line-clamp-2 block w-max text-lg font-bold">
+        <h3 className="relative line-clamp-2 block text-lg font-bold">
           <Link
             href={`/blog/${currentSlug}`}
-            className="group inline-block hover:text-zinc-950 dark:text-zinc-200 dark:hover:text-zinc-50"
+            className="group relative inline-block hover:text-zinc-950 dark:text-zinc-200 dark:hover:text-zinc-50"
           >
             {title}
-            <span className="absolute bottom-0 left-0 h-0.5 w-full origin-bottom-right scale-x-0 transform bg-gradient-to-r from-emerald-200 to-cyan-400 transition-transform duration-300 group-hover:origin-bottom-left group-hover:scale-x-100"></span>
+            <span className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform bg-gradient-to-r from-emerald-200 to-cyan-400 transition-transform duration-300 group-hover:scale-x-100"></span>
           </Link>
         </h3>
+
         <p className="mb-2 font-light">{formattedDate(createdAt)}</p>
         <p className="line-clamp-3 text-justify">{smallDescription}</p>
       </div>
