@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/atoms/Button";
 import { VariantProps } from "class-variance-authority";
+import { ReactNode } from "react";
 
 type Category = "navbar" | "navside";
 type Color = string | string[];
@@ -139,4 +140,14 @@ export interface TagListProps {
 
 export interface TagItemProps {
   tag: string;
+}
+
+export interface Heading {
+  text: string;
+  id: string;
+  level: number;
+}
+
+export interface TableOfContentsProps {
+  content: ReactNode;
 }
