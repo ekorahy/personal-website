@@ -1,6 +1,7 @@
 import ContentSection from "@/components/molecules/ContentSection";
 import HeaderPage from "@/components/molecules/HeaderPage";
 import NotFoundTemplate from "@/components/molecules/NotFoundTemplate";
+import TableOfContents from "@/components/molecules/TableOfContents";
 import TagList from "@/components/molecules/TagList";
 import { getBlogDetail } from "@/data/remote/blog";
 import { FullBlog } from "@/types";
@@ -81,8 +82,24 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
       </ContentSection>
       <ContentSection>
-        <div className="prose !max-w-none text-zinc-700 dark:text-zinc-400 dark:prose-headings:text-white dark:prose-strong:text-white">
-          <PortableText value={blogDetail.content} />
+        <div className="flex flex-col lg:flex-row-reverse lg:gap-8">
+          <TableOfContents content={blogDetail.content} />
+          <div className="prose mt-0 !max-w-none p-4 pt-0 text-zinc-700 dark:text-zinc-400 dark:prose-headings:text-white dark:prose-strong:text-white lg:w-3/4">
+            {blogDetail.content.map((block: any, index: number) => {
+              if (block._type === "block" && block.style.startsWith("h")) {
+                const text = block.children
+                  .map((child: any) => child.text)
+                  .join("");
+                const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+                return (
+                  <div key={id} id={id}>
+                    <PortableText value={[block]} />
+                  </div>
+                );
+              }
+              return <PortableText key={index} value={[block]} />;
+            })}
+          </div>
         </div>
       </ContentSection>
     </article>
