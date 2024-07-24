@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <HeaderPage title="Blog Detail" />
+      <HeaderPage title="Blog Detail" backButton={true} />
       <ContentSection>
         <div className="relative overflow-hidden rounded-md">
           <Image

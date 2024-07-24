@@ -87,6 +87,7 @@ export interface ContentSectionProps {
 export interface HeaderPageProps {
   title: string;
   description?: string;
+  backButton?: boolean;
 }
 
 export interface TechListProps {
