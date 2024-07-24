@@ -171,3 +171,27 @@ export interface TagsFilterProps {
   tags: string[];
   onTagClick: (tag: string) => void;
 }
+
+export interface Project {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  description: string;
+  linkDemo: string;
+  techStack: TechStack[];
+}
+
+export interface ProjectArticleProps {
+  initialProjects: Project[];
+}
+
+export interface ProjectListProps {
+  projects: Project[];
+}
+
+export interface CategoryFilterProps {
+  categories: string[];
+  selectedCategory: string;
+  onCategoryChange: (category: string) => void;
+}
