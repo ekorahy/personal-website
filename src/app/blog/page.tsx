@@ -1,6 +1,4 @@
-import BlogList from "@/components/molecules/BlogList";
-import ContentSection from "@/components/molecules/ContentSection";
-import HeaderPage from "@/components/molecules/HeaderPage";
+import BlogArticle from "@/components/molecules/BlogArticle";
 import { getBlog } from "@/data/remote/blog";
 import { BlogCard } from "@/types";
 import { Metadata } from "next";
@@ -13,16 +11,5 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const blog: BlogCard[] = await getBlog();
-
-  return (
-    <article>
-      <HeaderPage
-        title="Blog"
-        description="Share my thoughts, personal stories, tips, tricks, tech reviews, tutorials, etc."
-      />
-      <ContentSection>
-        <BlogList blog={blog} />
-      </ContentSection>
-    </article>
-  );
+  return <BlogArticle initialBlog={blog} />;
 }

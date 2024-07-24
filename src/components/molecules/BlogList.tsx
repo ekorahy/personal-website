@@ -1,12 +1,12 @@
 import { BlogListProps } from "@/types";
 import BlogItem from "../atoms/BlogItem";
-import EmptyData from "./EmptyData";
+import ErrorResponse from "./ErrorResponse";
 
 export default function BlogList({ blog }: BlogListProps) {
   return (
     <>
       {blog.length === 0 ? (
-        <EmptyData title="Empty Article" />
+        <ErrorResponse title="Empty Article" />
       ) : (
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
           {blog.map((post, idx) => (

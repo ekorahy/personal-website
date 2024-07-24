@@ -151,3 +151,17 @@ export interface Heading {
 export interface TableOfContentsProps {
   content: ReactNode;
 }
+
+export interface SearchBarProps {
+  keyword: string;
+  keywordChange: (newKeyword: string) => void;
+  removeKeyword: () => void;
+}
+
+export interface BlogArticleProps {
+  initialBlog: BlogCard[];
+}
+
+export interface ErrorResponseProps {
+  title: string
+}
