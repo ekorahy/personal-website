@@ -1,27 +1,33 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FormData } from "@/types";
 
 export default function EmailInput() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm<FormData>();
 
   const form = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState(false);
 
-  const onSubmitHandler = handleSubmit((formData) => {
+  const onSubmitHandler: SubmitHandler<FormData> = () => {
     if (form.current) {
       setIsSending(true);
 
       emailjs
-        .sendForm("service_bgzlljs", "template_1586lee", form.current, {
-          publicKey: "RjP6YTZ4yUUcE9-Xl",
-        })
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+          form.current,
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string,
+          },
+        )
         .then(
           () => {
             alert("Message sent successfully");
@@ -34,13 +40,13 @@ export default function EmailInput() {
           setIsSending(false);
         });
     }
-  });
+  };
 
   const fieldInputClassName =
     "w-full rounded-md border border-zinc-200 p-2 focus:outline-none dark:border-zinc-800";
 
   return (
-    <form ref={form} onSubmit={onSubmitHandler}>
+    <form ref={form} onSubmit={handleSubmit(onSubmitHandler)}>
       <div className="grid-cols-2 gap-4 md:grid">
         <div className="mb-4">
           <label className="mb-1 block" htmlFor="name">
@@ -50,11 +56,11 @@ export default function EmailInput() {
             className={fieldInputClassName}
             id="name"
             type="text"
-            {...register("name", { required: true })}
+            {...register("name", { required: "Name is required" })}
           />
           {errors.name && (
             <p role="alert" className="text-red-500">
-              *Name is required
+              *{(errors.name as { message: string }).message}
             </p>
           )}
         </div>
@@ -65,12 +71,18 @@ export default function EmailInput() {
           <input
             className={fieldInputClassName}
             id="email"
-            type="email"
-            {...register("email", { required: true })}
+            type="text"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Invalid email address",
+              },
+            })}
           />
           {errors.email && (
             <p role="alert" className="text-red-500">
-              *Email is required
+              *{(errors.email as { message: string }).message}
             </p>
           )}
         </div>
@@ -83,11 +95,11 @@ export default function EmailInput() {
           className={fieldInputClassName}
           id="subject"
           type="text"
-          {...register("subject", { required: true })}
+          {...register("subject", { required: "Subject is required" })}
         />
         {errors.subject && (
           <p role="alert" className="text-red-500">
-            *Subject is required
+            *{(errors.subject as { message: string }).message}
           </p>
         )}
       </div>
@@ -98,11 +110,11 @@ export default function EmailInput() {
         <textarea
           className={`min-h-28 ${fieldInputClassName}`}
           id="message"
-          {...register("message", { required: true })}
+          {...register("message", { required: "Message is required" })}
         ></textarea>
         {errors.message && (
           <p role="alert" className="text-red-500">
-            *Message is required
+            *{(errors.message as { message: string }).message}
           </p>
         )}
       </div>
