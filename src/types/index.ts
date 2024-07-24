@@ -194,3 +194,10 @@ export interface CategoryFilterProps {
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
 }
+
+export interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
