@@ -163,5 +163,10 @@ export interface BlogArticleProps {
 }
 
 export interface ErrorResponseProps {
-  title: string
+  title: string;
+}
+
+export interface TagsFilterProps {
+  tags: string[];
+  onTagClick: (tag: string) => void;
 }
