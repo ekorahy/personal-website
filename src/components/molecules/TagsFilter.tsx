@@ -2,7 +2,7 @@ import { TagsFilterProps } from "@/types";
 
 export default function TagsFilter({ tags, onTagClick }: TagsFilterProps) {
   return (
-    <div className="mt-3 flex items-center gap-2 overflow-x-auto">
+    <div className="mt-1 flex items-center gap-2 overflow-x-auto lg:mt-3">
       {tags.map((tag) => (
         <button
           key={tag}

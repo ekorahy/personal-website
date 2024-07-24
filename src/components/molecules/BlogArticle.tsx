@@ -82,7 +82,7 @@ export default function BlogArticle({ initialBlog }: BlogArticleProps) {
         description="Share my thoughts, personal stories, tips, tricks, tech reviews, tutorials, etc."
       />
       <ContentSection>
-        <section className="mb-8">
+        <section className="mb-6 lg:mb-8">
           <SearchBar
             keyword={keyword}
             keywordChange={onKeywordChangeHandler}
