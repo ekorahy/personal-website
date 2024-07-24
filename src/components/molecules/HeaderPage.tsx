@@ -26,7 +26,7 @@ export default function HeaderPage({
     >
       {backButton && (
         <Link href="/blog">
-          <IoMdArrowBack className="text-xl" />
+          <IoMdArrowBack className="text-xl text-slate-950 dark:text-white" />
         </Link>
       )}
       <div>
