@@ -32,7 +32,6 @@ export interface FavoriteTechItemProps {
 
 export interface NavFooterItemProps {
   name: string;
-  link: string;
 }
 
 export interface NavItemProps {
