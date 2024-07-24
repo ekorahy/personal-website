@@ -8,6 +8,7 @@ import ContentSection from "@/components/molecules/ContentSection";
 import HeaderPage from "@/components/molecules/HeaderPage";
 import { BlogArticleProps, BlogCard } from "@/types";
 import ErrorResponse from "./ErrorResponse";
+import TagsFilter from "./TagsFilter";
 
 export default function BlogArticle({ initialBlog }: BlogArticleProps) {
   const [blog, setBlog] = useState<BlogCard[]>(initialBlog);
@@ -16,13 +17,24 @@ export default function BlogArticle({ initialBlog }: BlogArticleProps) {
   const [keyword, setKeyword] = useState<string>(
     () => searchParams.get("keyword") || "",
   );
+  const [selectedTags, setSelectedTags] = useState<string[]>(() => {
+    const tags = searchParams.get("keyword")?.split(",") || [];
+    return tags
+      .filter((tag) => tag.startsWith("tag:"))
+      .map((tag) => tag.replace("tag:", ""));
+  });
 
   useEffect(() => {
     setKeyword(searchParams.get("keyword") || "");
+    const tags = searchParams.get("keyword")?.split(",") || [];
+    setSelectedTags(
+      tags
+        .filter((tag) => tag.startsWith("tag:"))
+        .map((tag) => tag.replace("tag:", "")),
+    );
   }, [searchParams]);
 
-  const onKeywordChangeHandler = (newKeyword: string) => {
-    setKeyword(newKeyword);
+  const updateSearchParams = (newKeyword: string) => {
     const params = new URLSearchParams(window.location.search);
     if (newKeyword) {
       params.set("keyword", newKeyword);
@@ -32,25 +44,36 @@ export default function BlogArticle({ initialBlog }: BlogArticleProps) {
     router.push(`?${params.toString()}`, undefined);
   };
 
+  const onKeywordChangeHandler = (newKeyword: string) => {
+    setKeyword(newKeyword);
+    updateSearchParams(newKeyword);
+  };
+
   const onRemoveKeywordHandler = () => {
     setKeyword("");
-    const params = new URLSearchParams(window.location.search);
-    params.delete("keyword");
-    router.push(`?${params.toString()}`, undefined);
+    updateSearchParams("");
+  };
+
+  const onTagClickHandler = (tag: string) => {
+    setKeyword(tag);
+    updateSearchParams(tag);
   };
 
   const filteredBlog = blog.filter((article) => {
     const lowerCaseKeyword = keyword.toLowerCase();
-    const matchesTitle = article.title.toLowerCase().includes(lowerCaseKeyword);
-    const matchesDescription = article.smallDescription
-      .toLowerCase()
-      .includes(lowerCaseKeyword);
-    const matchesTags = article.tags.some((tag) =>
-      tag.toLowerCase().includes(lowerCaseKeyword),
-    );
+    const matchesKeyword =
+      article.title.toLowerCase().includes(lowerCaseKeyword) ||
+      article.smallDescription.toLowerCase().includes(lowerCaseKeyword) ||
+      article.tags.some((tag) => tag.toLowerCase().includes(lowerCaseKeyword));
 
-    return matchesTitle || matchesDescription || matchesTags;
+    const matchesTags =
+      selectedTags.length === 0 ||
+      selectedTags.every((tag) => article.tags.includes(tag));
+
+    return matchesKeyword && matchesTags;
   });
+
+  const allTags = Array.from(new Set(blog.flatMap((article) => article.tags)));
 
   return (
     <article>
@@ -65,6 +88,7 @@ export default function BlogArticle({ initialBlog }: BlogArticleProps) {
             keywordChange={onKeywordChangeHandler}
             removeKeyword={onRemoveKeywordHandler}
           />
+          <TagsFilter tags={allTags} onTagClick={onTagClickHandler} />
         </section>
         {filteredBlog.length === 0 ? (
           <ErrorResponse title="Blog Not Found" />
@@ -74,4 +98,4 @@ export default function BlogArticle({ initialBlog }: BlogArticleProps) {
       </ContentSection>
     </article>
   );
-};
+}
