@@ -13,6 +13,9 @@ import {
   SiVitest,
   SiAndroid,
   SiGithub,
+  SiTypescript,
+  SiGraphql,
+  SiRecoil,
 } from "react-icons/si";
 
 export const projects = [
@@ -344,5 +347,130 @@ export const projects = [
     isDemo: false,
     linkDemo: "-",
     linkRepo: "https://github.com/ekorahy/StoryApp",
+  },
+  {
+    id: "project-6",
+    name: "RickAndMorty",
+    category: "Web App",
+    image: "/projects/project_6.png",
+    description:
+      "A simple Rick and Morty web application from the results of fetching data using GraphQL from rickandmorty API.",
+    techStack: [
+      {
+        id: "tect-project-1",
+        name: "Javascript",
+        logo: <SiJavascript />,
+        color: "#F7DF1E",
+      },
+      {
+        id: "tect-project-2",
+        name: "React.js",
+        logo: <SiReact />,
+        color: "#61DAFB",
+      },
+      {
+        id: "tect-project-3",
+        name: "Tailwind",
+        logo: <SiTailwindcss />,
+        color: "#06B6D4",
+      },
+      {
+        id: "tect-project-4",
+        name: "GraphQL",
+        logo: <SiGraphql />,
+        color: "#E10098",
+      },
+      {
+        id: "tech-project-5",
+        name: "Eslint",
+        logo: <SiEslint />,
+        color: "#4B32C3",
+      },
+      {
+        id: "tect-project-6",
+        name: "React Router",
+        logo: <SiReactrouter />,
+        color: "#CA4245",
+      },
+      {
+        id: "tect-project-7",
+        name: "Vite",
+        logo: <SiVite />,
+        color: "#646CFF",
+      },
+      {
+        id: "tect-project-8",
+        name: "Recoil.js",
+        logo: <SiRecoil />,
+        color: "#3578E5",
+      },
+    ],
+    features: [
+      "View Characters List",
+      "Pagination for Characters List",
+      "View Character Detail",
+      "Assign Character to Location",
+      "View Character by Location",
+    ],
+    isDemo: true,
+    linkDemo: "https://rickandmorty-ekorahy.vercel.app/",
+    linkRepo: "https://github.com/ekorahy/RickAndMorty",
+  },
+  {
+    id: "project-7",
+    name: "Bookshelf",
+    category: "Web App",
+    image: "/projects/project_7.png",
+    description:
+      "A simple bookshelf app designed to help users manage their book collection digitally. With a clean interface and functional features, Bookshelf allows users to add, search, and manage their books with ease.",
+    techStack: [
+      {
+        id: "tect-project-1",
+        name: "TypeScript",
+        logo: <SiTypescript />,
+        color: "#3178C6",
+      },
+      {
+        id: "tect-project-2",
+        name: "React.js",
+        logo: <SiReact />,
+        color: "#61DAFB",
+      },
+      {
+        id: "tect-project-3",
+        name: "Tailwind",
+        logo: <SiTailwindcss />,
+        color: "#06B6D4",
+      },
+      {
+        id: "tech-project-5",
+        name: "Eslint",
+        logo: <SiEslint />,
+        color: "#4B32C3",
+      },
+      {
+        id: "tect-project-6",
+        name: "React Router",
+        logo: <SiReactrouter />,
+        color: "#CA4245",
+      },
+      {
+        id: "tect-project-7",
+        name: "Vite",
+        logo: <SiVite />,
+        color: "#646CFF",
+      },
+    ],
+    features: [
+      "View Books based on Status (All, Not Read, Currently Read, and Read)",
+      "Search Books",
+      "Create Book (save in local storage)",
+      "View Book Details",
+      "Change Status Book",
+      "Delete Book",
+    ],
+    isDemo: true,
+    linkDemo: "https://bookshelf-ekorahy.vercel.app/",
+    linkRepo: "https://github.com/ekorahy/Bookshelf",
   },
 ];
