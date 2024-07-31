@@ -49,6 +49,7 @@ export interface TechStack {
 }
 
 export interface ProjectItemProps {
+  id: string;
   name: string;
   category: string;
   image: string;
@@ -87,6 +88,7 @@ export interface HeaderPageProps {
   title: string;
   description?: string;
   backButton?: boolean;
+  backTo?: string;
 }
 
 export interface TechListProps {
@@ -132,6 +134,7 @@ export interface BlogListProps {
 
 export interface TechStackListProps {
   techStack: TechStack[];
+  isDetail?: boolean;
 }
 
 export interface TagListProps {
@@ -201,3 +204,24 @@ export interface FormData {
   subject: string;
   message: string;
 };
+
+export interface FeatureItemProps {
+  feature: string
+}
+
+export interface FeaturesItemProps {
+  features: string[];
+}
+
+export interface ProjectDetail {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  description: string;
+  techStack: TechStack[];
+  features: string[];
+  isDemo: boolean;
+  linkDemo: string;
+  linkRepo: string;
+}

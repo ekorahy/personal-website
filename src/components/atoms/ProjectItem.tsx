@@ -5,6 +5,7 @@ import TechStackList from "../molecules/TechStackList";
 import { ProjectItemProps } from "@/types";
 
 export default function ProjectItem({
+  id,
   name,
   category,
   image,
@@ -29,7 +30,7 @@ export default function ProjectItem({
         <div className="mb-4 px-6">
           <h3 className="mb-1 w-max text-lg font-bold">
             <Link
-              href={linkDemo}
+              href={`/projects/${id}`}
               className="group relative flex items-center gap-1 hover:text-zinc-950 dark:text-zinc-200 dark:hover:text-zinc-50"
             >
               {name}
@@ -40,7 +41,7 @@ export default function ProjectItem({
           <p className="mb-2 bg-gradient-to-r from-emerald-200 to-cyan-400 bg-clip-text text-transparent dark:from-emerald-300 dark:to-cyan-500">
             {category}
           </p>
-          <p className="text-justify">{description}</p>
+          <p className="text-justify line-clamp-3">{description}</p>
         </div>
         <TechStackList techStack={techStack} />
       </div>
