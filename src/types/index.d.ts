@@ -7,11 +7,11 @@ type Color = string | string[];
 type Direction = "left" | "right";
 type Speed = "fast" | "normal" | "slow";
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+declare interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
-export interface CareerItemProps {
+declare interface CareerItemProps {
   company: string;
   position: string;
   duration: string;
@@ -20,35 +20,35 @@ export interface CareerItemProps {
   link: string;
 }
 
-export interface DescriptionPageProps {
+declare interface DescriptionPageProps {
   description: string;
 }
 
-export interface FavoriteTechItemProps {
+declare interface FavoriteTechItemProps {
   name: string;
   logo: React.ReactNode;
   color: string;
 }
 
-export interface NavFooterItemProps {
+declare interface NavFooterItemProps {
   name: string;
 }
 
-export interface NavItemProps {
+declare interface NavItemProps {
   name: string;
   icon: React.ReactNode;
   linkTo: string;
   category: Category;
 }
 
-export interface TechStack {
+declare interface TechStack {
   id: string;
   name: string;
   logo: React.ReactNode;
   color: string;
 }
 
-export interface ProjectItemProps {
+declare interface ProjectItemProps {
   id: string;
   name: string;
   category: string;
@@ -58,47 +58,47 @@ export interface ProjectItemProps {
   techStack: TechStack[];
 }
 
-export interface SocialMediaItemProps {
+declare interface SocialMediaItemProps {
   title: string;
   logo: React.ReactNode;
   color: Color;
   link: string;
 }
 
-export interface TechItemProps {
+declare interface TechItemProps {
   name: string;
   logo: React.ReactNode;
   color: string;
 }
 
-export interface TitlePageProps {
+declare interface TitlePageProps {
   title: string;
 }
 
-export interface TitleSectionProps {
+declare interface TitleSectionProps {
   title: string;
   icon: React.ReactNode;
 }
 
-export interface ContentSectionProps {
+declare interface ContentSectionProps {
   children: React.ReactNode;
 }
 
-export interface HeaderPageProps {
+declare interface HeaderPageProps {
   title: string;
   description?: string;
   backButton?: boolean;
   backTo?: string;
 }
 
-export interface TechListProps {
+declare interface TechListProps {
   direction?: Direction;
   speed?: Speed;
   pauseOnHover?: boolean;
   className?: string;
 }
 
-export interface BlogCard {
+declare interface BlogCard {
   title: string;
   smallDescription: string;
   currentSlug: string;
@@ -108,7 +108,7 @@ export interface BlogCard {
   tags: string[];
 }
 
-export interface FullBlog {
+declare interface FullBlog {
   currentSlug: string;
   title: string;
   content: any;
@@ -118,7 +118,7 @@ export interface FullBlog {
   tags: string[];
 }
 
-export interface Project {
+declare interface Project {
   id: string;
   name: string;
   image: string;
@@ -128,53 +128,53 @@ export interface Project {
   techStack: TechStack[];
 }
 
-export interface BlogListProps {
+declare interface BlogListProps {
   blog: BlogCard[];
 }
 
-export interface TechStackListProps {
+declare interface TechStackListProps {
   techStack: TechStack[];
   isDetail?: boolean;
 }
 
-export interface TagListProps {
+declare interface TagListProps {
   tags: string[];
 }
 
-export interface TagItemProps {
+declare interface TagItemProps {
   tag: string;
 }
 
-export interface Heading {
+declare interface Heading {
   text: string;
   id: string;
   level: number;
 }
 
-export interface TableOfContentsProps {
+declare interface TableOfContentsProps {
   content: ReactNode;
 }
 
-export interface SearchBarProps {
+declare interface SearchBarProps {
   keyword: string;
   keywordChange: (newKeyword: string) => void;
   removeKeyword: () => void;
 }
 
-export interface BlogArticleProps {
+declare interface BlogArticleProps {
   initialBlog: BlogCard[];
 }
 
-export interface ErrorResponseProps {
+declare interface ErrorResponseProps {
   title: string;
 }
 
-export interface TagsFilterProps {
+declare interface TagsFilterProps {
   tags: string[];
   onTagClick: (tag: string) => void;
 }
 
-export interface Project {
+declare interface Project {
   id: string;
   name: string;
   category: string;
@@ -184,36 +184,36 @@ export interface Project {
   techStack: TechStack[];
 }
 
-export interface ProjectArticleProps {
+declare interface ProjectArticleProps {
   initialProjects: Project[];
 }
 
-export interface ProjectListProps {
+declare interface ProjectListProps {
   projects: Project[];
 }
 
-export interface CategoryFilterProps {
+declare interface CategoryFilterProps {
   categories: string[];
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
 }
 
-export interface FormData {
+declare interface FormData {
   name: string;
   email: string;
   subject: string;
   message: string;
 };
 
-export interface FeatureItemProps {
+declare interface FeatureItemProps {
   feature: string
 }
 
-export interface FeaturesItemProps {
+declare interface FeaturesItemProps {
   features: string[];
 }
 
-export interface ProjectDetail {
+declare interface ProjectDetail {
   id: string;
   name: string;
   category: string;
