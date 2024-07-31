@@ -21,6 +21,7 @@ export default function ProjectList({ projects }: ProjectListProps) {
             }) => (
               <ProjectItem
                 key={id}
+                id={id}
                 name={name}
                 category={category}
                 image={image}

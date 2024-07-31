@@ -11,17 +11,18 @@ import {
   SiTensorflow,
   SiVite,
   SiVitest,
+  SiAndroid,
+  SiGithub,
 } from "react-icons/si";
 
 export const projects = [
   {
     id: "project-1",
-    name: "GitUs",
+    name: "GitUS",
     category: "Android App",
     image: "/projects/project_1.png",
     description:
       "A GitHub user search application, the result of an exercise on fetching the GitHub API. This application allows users to search for information about GitHub users based on the username entered.",
-    linkDemo: "https://github.com/ekorahy/Git-US",
     techStack: [
       {
         id: "tect-project-1",
@@ -35,7 +36,44 @@ export const projects = [
         logo: <BsFiletypeXml />,
         color: "#E34F26",
       },
+      {
+        id: "tect-project-3",
+        name: "MVVM Architecture",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-4",
+        name: "Github API",
+        logo: <SiGithub />,
+        color: "#181717",
+      },
+      {
+        id: "tect-project-5",
+        name: "Retrofit",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-6",
+        name: "Room",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
     ],
+    features: [
+      "Splash Screen",
+      "View Users",
+      "Search User by Username",
+      "View User Details",
+      "Add User to Favorite",
+      "View Favorite Users",
+      "Share User",
+      "Dark Mode",
+    ],
+    isDemo: false,
+    linkDemo: "-",
+    linkRepo: "https://github.com/ekorahy/Git-US",
   },
   {
     id: "project-2",
@@ -43,8 +81,7 @@ export const projects = [
     category: "Web App",
     image: "/projects/project_2.png",
     description:
-      "A discussion forum application that allows users to share ideas, discuss, and find solutions to various topics. Users can create new topics, reply to posts, give upvotes or downvotes, and follow interesting discussion threads.",
-    linkDemo: "https://disfo-hub.vercel.app/",
+      "A discussion forum application that allows users to share ideas, discuss, and find solutions to various topics. Users can create new topics, reply to posts, and give upvotes or downvotes.",
     techStack: [
       {
         id: "tect-project-1",
@@ -95,6 +132,22 @@ export const projects = [
         color: "#6EBC00",
       },
     ],
+    features: [
+      "Register User",
+      "Authentication and Authorization User",
+      "View Threads",
+      "View Leaderboards",
+      "Search Threads and Filter by Category",
+      "Create Thread",
+      "UpVote or DownVote Thread",
+      "View Thread Detail",
+      "Upvote or Downvote Thread Details",
+      "Create Comment in Thread",
+      "Upvote or Downvote Comment in Thread",
+    ],
+    isDemo: true,
+    linkDemo: "https://disfo-hub.vercel.app/",
+    linkRepo: "https://github.com/ekorahy/DisfoHub",
   },
   {
     id: "project-3",
@@ -103,7 +156,6 @@ export const projects = [
     image: "/projects/project_3.png",
     description:
       "A skin cancer detection app makes it easy for users to do an initial check of their skin condition. The app analyzes skin images and provides classification results on whether it is skin cancer or not. In addition, the app also provides up-to-date information on cancer news.",
-    linkDemo: "https://github.com/ekorahy/Asclepius-App",
     techStack: [
       {
         id: "tect-project-1",
@@ -119,11 +171,53 @@ export const projects = [
       },
       {
         id: "tect-project-3",
+        name: "MVVM Architecture",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-4",
         name: "Tensorflow",
         logo: <SiTensorflow />,
         color: "#E65100",
       },
+      {
+        id: "tect-project-5",
+        name: "Yalantis - UCrop",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-6",
+        name: "News API",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-7",
+        name: "Retrofit",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-8",
+        name: "Room",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
     ],
+    features: [
+      "Splash Screen",
+      "Upload Image using Camera or Gallery",
+      "View Classification Results",
+      "Save Classification Results to History (automatically)",
+      "View History",
+      "View News About Cancer",
+      "View News Details",
+    ],
+    isDemo: false,
+    linkDemo: "-",
+    linkRepo: "https://github.com/ekorahy/Asclepius-App",
   },
   {
     id: "project-4",
@@ -132,7 +226,6 @@ export const projects = [
     image: "/projects/project_4.png",
     description:
       "A personal note application that makes it easy for users to record, store, and manage their notes efficiently, equipped with an archived feature that allows users to save old notes without deleting them, so that notes remain organized and easily accessible at any time.",
-    linkDemo: "https://mindspace-ekorahy.vercel.app/",
     techStack: [
       {
         id: "tect-project-1",
@@ -177,6 +270,22 @@ export const projects = [
         color: "#646CFF",
       },
     ],
+    features: [
+      "Register User",
+      "Authentication and Authorization User",
+      "View Notes",
+      "View Archived Notes",
+      "Search Note",
+      "View Note Details",
+      "Create Note",
+      "Archive Note",
+      "Unarchive Note",
+      "Delete Note",
+      "Dark Mode",
+    ],
+    isDemo: true,
+    linkDemo: "https://mindspace-ekorahy.vercel.app/",
+    linkRepo: "https://github.com/ekorahy/MindSpace",
   },
   {
     id: "project-5",
@@ -185,7 +294,6 @@ export const projects = [
     image: "/projects/project_5.png",
     description:
       "A story app that allows users to share their experiences in an interactive and personalized way. The app comes with a location share feature, allowing users to point out interesting places they visit and give more context to their stories.",
-    linkDemo: "https://github.com/ekorahy/StoryApp",
     techStack: [
       {
         id: "tect-project-1",
@@ -201,10 +309,40 @@ export const projects = [
       },
       {
         id: "tect-project-3",
+        name: "MVVM Architecture",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-4",
         name: "Google Maps API",
         logo: <SiGooglemaps />,
         color: "#34A853",
       },
+      {
+        id: "tect-project-5",
+        name: "Retrofit",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
+      {
+        id: "tect-project-6",
+        name: "Room",
+        logo: <SiAndroid />,
+        color: "#3DDC84",
+      },
     ],
+    features: [
+      "Splash Screen",
+      "Register User",
+      "Authentication and Authorization User",
+      "View Stories",
+      "View Story Details",
+      "Create Story + Location",
+      "View Stories with Map Location",
+    ],
+    isDemo: false,
+    linkDemo: "-",
+    linkRepo: "https://github.com/ekorahy/StoryApp",
   },
 ];
