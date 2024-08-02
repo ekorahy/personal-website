@@ -104,7 +104,7 @@ export default function Page({ params }: { params: { id: string } }) {
               </Link>
             </section>
           </div>
-          <section className="mt-4">
+          <section className="mt-6 lg:mt-0">
             <h3 className="mb-1 w-max text-2xl font-bold dark:text-white">
               {name}
             </h3>
@@ -112,11 +112,11 @@ export default function Page({ params }: { params: { id: string } }) {
               {category}
             </p>
             <p className="text-justify">{description}</p>
-            <section className="relative mt-4 pb-10">
+            <section className="relative mt-6 pb-10">
               <h4 className="text-lg font-bold dark:text-white">Tech Used</h4>
               <TechStackList techStack={techStack} isDetail={true} />
             </section>
-            <section className="mt-6">
+            <section className="mt-8">
               <h4 className="text-lg font-bold dark:text-white">Features</h4>
               <FeaturesList features={features} />
             </section>
